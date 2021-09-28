@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Jogo da memória</title>
+</head>
+<body>
+    <main class="memory-game">
+        <div id="alterarCarta"> 
+            <p id="t1">Tela Administrador Manter Cartas & Boosters</p>
+        </div>
+        <div id="manter"> Menu Pesquisar Cartas
+           <br> "EM DESENVOLVIMENTO" <br><br>
+           <script>
+
+            var dir = 'H:/Ulbra/Modelagem de Software/teste/' // Pasta Minhas imagens
+       
+            var num = '7' // Limite a mostrar
+            window.onload = function(){
+                for (var i = 1; i <= num; i++) {
+                    document.body.innerHTML += "<img src='"+dir+"/"+i+".JPG'>";
+                }
+            }
+       
+           </script>
+            <br> <br> <br> <br> <br>
+            <a href="telaAdmin.html">Voltar Menu 
+        </div>
+       
+    </main>
+</body>
+</html>

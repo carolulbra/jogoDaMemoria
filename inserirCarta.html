@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Jogo da memória</title>
+</head>
+<body>
+    <main class="memory-game">
+        <div id="inserirCarta"> 
+            <p id="t1">Tela Administrador Manter Cartas & Boosters</p>
+        </div>
+        <div id="manter"> Menu Inserir Cartas
+            <form action="gravar.php" method="POST" enctype="multipart/form-data">
+                <label for="imagem">Insira uma nova carta aqui:
+                    <input type="file" name="imagem"/>
+                    <br/>
+                    <input type="submit" value="Não Enviar"/>
+                    <br> <br> <br> <br> <br>
+                    <a href="telaAdmin.html">Voltar Menu 
+                 </label>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
