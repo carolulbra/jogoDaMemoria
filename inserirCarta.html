@@ -13,15 +13,38 @@
         </div>
         <div id="manter"> Menu Inserir Cartas
             <form action="gravar.php" method="POST" enctype="multipart/form-data">
-                <label for="imagem">Insira uma nova carta aqui:
-                    <input type="file" name="imagem"/>
-                    <br/>
-                    <input type="submit" value="Não Enviar"/>
-                    <br> <br> <br> <br> <br>
-                    <a href="telaAdmin.html">Voltar Menu 
-                 </label>
+                <div>
+                    Escolha uma nova carta aqui:
+                    <input id="img-input" type="file" name="imagem">
+                </div>
+                <div id="img-container">
+                    <script>
+                        function readImage() {
+                            if (this.files && this.files[0]) {
+                                var file = new FileReader();
+                                file.onload = function(e) {
+                                    document.getElementById("preview").src = e.target.result;
+                                };       
+                                file.readAsDataURL(this.files[0]);
+                            }
+                        }
+                        document.getElementById("img-input").addEventListener("change", readImage, false);
+                    </script>
+                    <img id="preview" src="">
+                </div>
+                <div>
+                    <input type="submit" value="Enviar">
+                </div>
+                <br> 
+                <div id="desenv">"EM DESENVOLVIMENTO"</div>
+                    <br>
+                    <a href="telaAdmin.html">Voltar Menu
+                </div> 
             </form>
         </div>
     </main>
 </body>
 </html>
+
+
+    

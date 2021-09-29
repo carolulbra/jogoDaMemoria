@@ -7,10 +7,11 @@
 @font-face {
 	font-family: "Stardew_Valley";
 	src: local(Stardew_Valle),url(./fonts/Stardew_Valley.ttf);
+
 }
 
 body {
-    background-image: url("./img/fundo.png");
+    background-image: url("imgs/fundo.png");
     background-repeat: no-repeat;
     display: table;
     width: 1800px;
@@ -21,6 +22,7 @@ body {
     background-size: cover;
     font-family: "Stardew_Valley";
     color: rgb(236, 167, 17); 
+    text-shadow: 3px 3px black;
 }
 
 p { 
@@ -43,6 +45,14 @@ p {
     font-size:40px;
     text-indent: 30%; 
  }
+
+ #desenv {
+   font-size:80px;
+   text-indent: 30%;
+   color: rgb(241, 12, 12);
+   text-shadow: 3px 3px black;
+}
+
 
 
 
