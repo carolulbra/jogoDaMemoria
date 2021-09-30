@@ -18,6 +18,7 @@
             var altura;
             var larguraMenu = 400;
             var alturaMenu = 300;
+            var divisor = 2;
 
             canvas = document.getElementById("canvasMenu");
             ctx = canvas.getContext("2d");
@@ -34,14 +35,14 @@
 
             function desenharBaseMenu() {
                 ctx.fillStyle = "rgba(255,255,255,0.7)";
-                var x = parseInt((largura / 2) - (larguraMenu / 2));
-                var y = parseInt((altura / 2) - (alturaMenu / 2));
+                var x = parseInt((largura / divisor) - (larguraMenu / divisor));
+                var y = parseInt((altura / divisor) - (alturaMenu / divisor));
                 ctx.fillRect(x, y, larguraMenu, alturaMenu);
             }
 
             function desenharItensMenu() {
-                var x = parseInt((largura / 2) - (larguraMenu / 2));
-                var y = parseInt((altura / 2) - (alturaMenu / 2));
+                var x = parseInt((largura / divisor) - (larguraMenu / divisor));
+                var y = parseInt((altura / divisor) - (alturaMenu / divisor));
                 var img;
 
                 img = new Image();
@@ -59,8 +60,8 @@
 
             function selecionarItem(indice) {
                 desenharMenu();
-                var x = parseInt((largura / 2) - (larguraMenu / 2));
-                var y = parseInt((altura / 2) - (alturaMenu / 2));
+                var x = parseInt((largura / divisor) - (larguraMenu / divisor));
+                var y = parseInt((altura / divisor) - (alturaMenu / divisor));
                 var img;
                 img = new Image();
                 switch (indice) {
@@ -74,7 +75,7 @@
                         break;
                     case 2:
                         img.src = "sair_2.png";
-                        ctx.drawImage(img, x, y + 200);
+                        ctx.drawImage(img, x-2, y + 181);
                         break;
                 }
             }
@@ -92,8 +93,8 @@
             window.onmousemove = function () {
                 var posX = event.clientX;
                 var posY = event.clientY;
-                var x = parseInt((largura / 2) - (larguraMenu / 2));
-                var y = parseInt((altura / 2) - (alturaMenu / 2));
+                var x = parseInt((largura / divisor) - (larguraMenu / divisor));
+                var y = parseInt((altura / divisor) - (alturaMenu / divisor));
                 var indice = -1;
 
                 if (posX > x && posX < x + larguraMenu) {
