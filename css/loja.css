@@ -1,0 +1,676 @@
+/** {
+  box-sizing: border-box;
+}
+body {
+  font-size: 14px;
+}
+.v12_7 {
+  width: 100%;
+  height: 1024px;
+  background: rgba(255,255,255,1);
+  opacity: 1;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}*/
+
+body {
+  display: block;
+  margin: 0px;
+}
+.v58_109 {
+  width: 100%;
+  height: 1080px;
+  /* background: rgba(255,255,255,1); */
+  opacity: 1;
+  top: 14px;
+  left: 447px;
+  overflow: hidden;
+}
+.bg {
+  max-width:100%;
+  height:100%;
+  background: url("../images/bg.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+.v12_19 {
+  /* width: 100%;
+  height: 600px;
+  background: url("../images/v12_19.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 226px;
+  left: 631px;
+  overflow: hidden; */
+
+  /* width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align:center;
+  background-color: rgba(10,23,55,0.7);
+  color: white; */
+  
+  /* pura mágica */
+  /* position: absolute;
+  /* top: 50%; posiciona na metade da tela
+  margin-top: -25px; e retrocede metade da altura */
+
+  
+  width: 1090px;
+  height: 610px;
+  position: absolute;
+  top: 3%;
+  left: 5%;
+  right: 10%;
+  margin-top: -25px;
+  background: rgba(185,154,73,0.7200000286102295);
+}
+.v12_18 {
+  width: 100%;
+  height: 600px;
+  background: rgba(185,154,73,0.7200000286102295);
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 2px;
+  overflow: hidden;
+}
+.v12_20 {
+  width: 298px;
+  height: 574px;
+  background: url("../images/v12_20.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 14px;
+  left: 16px;
+  overflow: hidden;
+}
+.v58_107 {
+  width: 250px;
+  height: 225px;
+  /* background: rgba(255,255,255,1); */
+  opacity: 1;
+  position: absolute;
+  top: 42px;
+  left: 29px;
+  overflow: hidden;
+}
+.v12_21 {
+  width: 234px;
+  height: 205px;
+  background: url("../images/v12_21.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: relative;
+  top: 8px;
+  left: 4px;
+  overflow: hidden;
+}
+.v12_22 {
+  width: 230px;
+  height: 203px;
+  /* background: rgb(255, 255, 255); */
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border: 8px solid rgba(255,255,255,1);
+  overflow: hidden;
+}
+.v12_24 {
+  width: 264px;
+  height: 310px;
+  background: url("../images/v12_24.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 264px;
+  left: 14px;
+  overflow: hidden;
+}
+.v12_23 {
+  width: 260px;
+  color: rgba(255,255,255,1);
+  position: absolute;
+  top: 22px;
+  left: 4px;
+  font-family: Stardew Valley;
+  font-weight: Regular;
+  font-size: 48px;
+  opacity: 1;
+  text-align: center;
+}
+.v12_27 {
+  width: 750px;
+  height: 450px;
+  background: url("../images/v12_27.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 14px;
+  left: 308px;
+  overflow: hidden;
+}
+.v12_28 {
+  width: 713px;
+  height: 424px;
+  background: rgba(196,196,196,0);
+  opacity: 1;
+  position: absolute;
+  top: 10px;
+  left: 14px;
+  border: 8px solid rgba(255,255,255,1);
+  overflow: hidden;
+}
+.v12_42 {
+  width: 221px;
+  height: 424px;
+  background: url("../images/v12_42.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 10px;
+  left: 246px;
+  overflow: hidden;
+}
+.v58_106 {
+  width: 142px;
+  height: 219px;
+  /* background: rgba(255,255,255,1); */
+  opacity: 1;
+  position: absolute;
+  top: 15px;
+  left: 40px;
+  overflow: hidden;
+}
+.v12_37 {
+  width: 142px;
+  height: 219px;
+  background: url("../images/v12_37.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+.v58_105 {
+  width: 200px;
+  height: 100px;
+  /* background: rgba(255,255,255,1); */
+  opacity: 1;
+  position: absolute;
+  top: 235px;
+  left: 10px;
+  overflow: hidden;
+}
+.v12_45 {
+  width: 218px;
+  color: rgba(255,255,255,1);
+  position: relative;
+  top: 0px;
+  left: 0px;
+  font-family: Stardew Valley;
+  font-weight: Regular;
+  opacity: 1;
+  text-align: center;
+}
+.v12_51 {
+  width: 109px;
+  height: 98px;
+  /* background: rgba(255,255,255,1); */
+  opacity: 1;
+  position: absolute;
+  top: 319px;
+  left: 62px;
+  overflow: hidden;
+}
+.v12_52 {
+  width: 40px;
+  color: rgba(255,255,255,1);
+  position: absolute;
+  top: 0px;
+  left: 66px;
+  font-family: Stardew Valley;
+  font-weight: Regular;
+  font-size: 96px;
+  opacity: 1;
+  text-align: center;
+}
+.v12_53 {
+  width: 59px;
+  height: 55px;
+  background: url("../images/v12_53.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 22px;
+  left: 0px;
+  overflow: hidden;
+}
+.v12_40 {
+  width: 227px;
+  height: 417px;
+  background: url("../images/v12_40.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 10px;
+  left: 19px;
+  overflow: hidden;
+}
+.v58_104 {
+  width: 206px;
+  height: 195px;
+  /* background: rgba(255,255,255,1); */
+  opacity: 1;
+  position: absolute;
+  top: 4px;
+  left: 14px;
+  overflow: hidden;
+}
+.v12_34 {
+  width: 206px;
+  height: 195px;
+  background: url("../images/v12_34.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+.v58_103 {
+  width: 220px;
+  height: 120px;
+  /* background: rgba(255,255,255,1); */
+  opacity: 1;
+  position: absolute;
+  top: 200px;
+  left: 5px;
+  overflow: hidden;
+}
+.v12_46 {
+  width: 231px;
+  color: rgba(255,255,255,1);
+  position: relative;
+  top: 0px;
+  left: 0px;
+  font-family: Stardew Valley;
+  font-weight: Regular;
+  opacity: 1;
+  text-align: center;
+}
+.v12_50 {
+  width: 109px;
+  height: 98px;
+  /* background: rgba(255,255,255,1); */
+  opacity: 1;
+  position: absolute;
+  top: 319px;
+  left: 62px;
+  overflow: hidden;
+}
+.v12_47 {
+  width: 45px;
+  color: rgba(255,255,255,1);
+  position: absolute;
+  top: 0px;
+  left: 64px;
+  font-family: Stardew Valley;
+  font-weight: Regular;
+  font-size: 96px;
+  opacity: 1;
+  text-align: center;
+}
+.v12_48 {
+  width: 59px;
+  height: 55px;
+  background: url("../images/v12_48.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 22px;
+  left: 0px;
+  overflow: hidden;
+}
+.v12_41 {
+  width: 260px;
+  height: 417px;
+  background: url("../images/v12_41.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 12px;
+  left: 467px;
+  overflow: hidden;
+}
+.v12_55 {
+  width: 109px;
+  height: 98px;
+  /* background: rgba(255,255,255,1); */
+  opacity: 1;
+  position: absolute;
+  top: 319px;
+  left: 75px;
+  overflow: hidden;
+}
+.v12_56 {
+  width: 40px;
+  color: rgba(255,255,255,1);
+  position: absolute;
+  top: 0px;
+  left: 66px;
+  font-family: Stardew Valley;
+  font-weight: Regular;
+  font-size: 96px;
+  opacity: 1;
+  text-align: center;
+}
+.v12_57 {
+  width: 59px;
+  height: 55px;
+  background: url("../images/v12_57.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 22px;
+  left: 0px;
+  overflow: hidden;
+}
+.v58_101 {
+  width: 235px;
+  height: 107px;
+  /* background: rgba(255,255,255,1); */
+  opacity: 1;
+  position: absolute;
+  top: 210px;
+  left: 20px;
+  overflow: hidden;
+}
+.v12_43 {
+  width: 246px;
+  color: rgba(255,255,255,1);
+  position: relative;
+  top: 0px;
+  left: 0px;
+  font-family: Stardew Valley;
+  font-weight: Regular;
+  opacity: 1;
+  text-align: center;
+}
+.v58_102 {
+  width: 206px;
+  height: 195px;
+  /* background: rgba(255,255,255,1); */
+  opacity: 1;
+  position: absolute;
+  top: 10px;
+  left: 28px;
+  overflow: hidden;
+}
+.v58_100 {
+  width: 206px;
+  height: 195px;
+  background: url("../images/v58_100.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+.v12_32 {
+  width: 744px;
+    height: 123px;
+    background: url(../images/v12_32.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 475px;
+    left: 310px;
+    overflow: hidden;
+}
+.v12_33 {
+  width: 713px;
+  height: 100px;
+  background: rgba(196,196,196,0);
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 13px;
+  border: 8px solid rgba(255,255,255,1);
+  overflow: hidden;
+}
+.v58_89 {
+  width: 237px;
+  height: 100px;
+  background: url(../images/v58_89.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 9px;
+  left: 23px;
+  overflow: hidden;
+}
+.v58_92 {
+  width: 117px;
+  height: 100px;
+  background: url("../images/v58_92.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+.v58_93 {
+  width: 101px;
+  height: 96px;
+  background: url("../images/v58_93.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 2px;
+  left: 8px;
+  overflow: hidden;
+}
+.v12_61 {
+  width: 120px;
+  height: 100px;
+  background: url("../images/v12_61.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 117px;
+  overflow: hidden;
+}
+.v12_62 {
+  width: 120px;
+  color: rgba(255,255,255,1);
+  position: absolute;
+  top: 2px;
+  left: 0px;
+  font-family: Stardew Valley;
+  font-weight: Regular;
+  font-size: 96px;
+  opacity: 1;
+  text-align: center;
+}
+.v58_81 {
+  width: 221px;
+  height: 100px;
+  background: url("../images/v58_81.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 8px;
+  left: 261px;
+  overflow: hidden;
+}
+.v12_67 {
+  width: 106px;
+  height: 100px;
+  background: url("../images/v12_67.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+.v12_70 {
+  width: 69px;
+  height: 100px;
+  background: url("../images/v12_70.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+.v58_78 {
+  width: 102px;
+  height: 100px;
+  background: url("../images/v58_78.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 70px;
+  overflow: hidden;
+}
+.v58_80 {
+  width: 120px;
+  color: rgba(255,255,255,1);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  font-family: Stardew Valley;
+  font-weight: Regular;
+  font-size: 96px;
+  opacity: 1;
+  text-align: center;
+}
+.v58_86 {
+  width: 237px;
+  height: 100px;
+  background: url("../images/v58_86.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 8px;
+  left: 490px;
+  overflow: hidden;
+}
+.v12_63 {
+  width: 118px;
+  height: 100px;
+  background: url("../images/v12_63.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 119px;
+  overflow: hidden;
+}
+.v12_65 {
+  width: 120px;
+  color: rgba(255,255,255,1);
+  position: absolute;
+  top: 2px;
+  left: 0px;
+  font-family: Stardew Valley;
+  font-weight: Regular;
+  font-size: 96px;
+  opacity: 1;
+  text-align: center;
+}
+.v58_83 {
+  width: 119px;
+  height: 100px;
+  background: url("../images/v58_83.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+.v58_85 {
+  width: 116px;
+  height: 100px;
+  background: url("../images/v58_85.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  overflow: hidden;
+}
