@@ -120,8 +120,8 @@ function resetBoard() {
 
 function finalizarJogo(flag){
     if(flag === 1)
-         // Fim do tempo apresentar mesagem e ir tela pontuação ???/
-        teste = 10;
+        window.location ='../Ranking/adicionarNomeRanking.html'
+        seg = 100000;
     }
 
 
