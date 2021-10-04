@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Jogo da memória</title>
+</head>
+<body>
+    <main class="memory-game">
+        <div id="inserirCarta"> 
+            <p id="t1">Tela Administrador Manter Cartas & Boosters</p>
+        </div>
+        <div id="manter"> Menu Inserir Cartas
+            <form action="gravar.php" method="POST" enctype="multipart/form-data">
+                <div>
+                    Escolha uma nova carta aqui:
+                    <input id="img-input" type="file" name="imagem">
+                </div>
+                <div id="img-container">
+                    <script>
+                        function readImage() {
+                            if (this.files && this.files[0]) {
+                                var file = new FileReader();
+                                file.onload = function(e) {
+                                    document.getElementById("preview").src = e.target.result;
+                                };       
+                                file.readAsDataURL(this.files[0]);
+                            }
+                        }
+                        document.getElementById("img-input").addEventListener("change", readImage, false);
+                    </script>
+                    <img id="preview" src="">
+                </div>
+                <div>
+                    <input type="submit" value="Enviar">
+                </div>
+                <br> 
+                <div id="desenv">"EM DESENVOLVIMENTO"</div>
+                    <br>
+                    <a href="telaAdmin.html">Voltar Menu
+                </div> 
+            </form>
+        </div>
+    </main>
+</body>
+</html>
+
+
+    
