@@ -1,0 +1,649 @@
+body {
+  display: block;
+  margin: 0px;
+}
+.main {
+  width: 100%;
+  height: 1080px;
+  opacity: 1;
+  top: 14px;
+  left: 447px;
+  overflow: hidden;
+}
+.bg {
+  max-width:100%;
+  height:100%;
+  background: url("../images/loja/bg.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+.loja {  
+  width: 1090px;
+  height: 610px;
+  position: absolute;
+  top: 3%;
+  left: 5%;
+  right: 10%;
+  margin-top: -25px;
+  background: rgba(185,154,73,0.7200000286102295);
+}
+.personagem {
+  width: 298px;
+  height: 574px;
+  background: url("../images/v12_20.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 14px;
+  left: 16px;
+  overflow: hidden;
+}
+.marlon {
+  width: 250px;
+  height: 225px;
+  /* background: rgba(255,255,255,1); */
+  opacity: 1;
+  position: absolute;
+  top: 42px;
+  left: 29px;
+  overflow: hidden;
+}
+.marlon-image {
+  width: 234px;
+  height: 205px;
+  background: url("../images/marlon.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: relative;
+  top: 8px;
+  left: 4px;
+  overflow: hidden;
+}
+.marlon-moldura {
+  width: 230px;
+  height: 203px;
+  /* background: rgb(255, 255, 255); */
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border: 8px solid rgba(255,255,255,1);
+  overflow: hidden;
+}
+.mensagem {
+  width: 264px;
+  height: 310px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 264px;
+  left: 14px;
+  overflow: hidden;
+}
+.mensagem-span {
+  width: 260px;
+  color: rgba(255,255,255,1);
+  position: absolute;
+  top: 22px;
+  left: 4px;
+  font-family: Stardew Valley;
+  font-weight: Regular;
+  font-size: 48px;
+  opacity: 1;
+  text-align: center;
+}
+.itens {
+  width: 750px;
+  height: 450px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 14px;
+  left: 308px;
+  overflow: hidden;
+}
+.itens-grupo {
+  width: 713px;
+  height: 424px;
+  background: rgba(196,196,196,0);
+  opacity: 1;
+  position: absolute;
+  top: 10px;
+  left: 14px;
+  border: 8px solid rgba(255,255,255,1);
+  overflow: hidden;
+}
+.itens-gato {
+  width: 221px;
+  height: 436px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 10px;
+  left: 246px;
+  overflow: hidden;
+}
+.gato {
+  width: 142px;
+  height: 219px;
+  /* background: rgba(255,255,255,1); */
+  opacity: 1;
+  position: absolute;
+  top: 15px;
+  left: 40px;
+  overflow: hidden;
+}
+.gato-image {
+  width: 142px;
+  height: 219px;
+  background: url("../images/gato-image.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+.efeito-gato {
+  width: 200px;
+  height: 100px;
+  /* background: rgba(255,255,255,1); */
+  opacity: 1;
+  position: absolute;
+  top: 235px;
+  left: 10px;
+  overflow: hidden;
+  text-align: center;
+}
+.titulo-efeito-gato {
+  width: 218px;
+  color: rgba(255,255,255,1);
+  position: relative;
+  top: 0px;
+  left: 0px;
+  font-family: Stardew Valley;
+  font-weight: Regular;
+  opacity: 1;
+  text-align: center;
+  font-size: 50px;
+}
+.descricao-efeito-gato {
+  width: 218px;
+  color: rgba(255,255,255,1);
+  position: relative;
+  top: 0px;
+  left: 0px;
+  font-family: Stardew Valley;
+  font-weight: Regular;
+  opacity: 1;
+  text-align: center;
+  font-size: 35px;
+}
+.valor-gato {
+  width: 109px;
+  height: 98px;
+  /* background: rgba(255,255,255,1); */
+  opacity: 1;
+  position: absolute;
+  top: 319px;
+  left: 62px;
+  overflow: hidden;
+}
+.descricao-valor-gato {
+  width: 40px;
+  color: rgba(255,255,255,1);
+  position: absolute;
+  top: 15px;
+  left: 66px;
+  font-family: Stardew Valley;
+  font-weight: Regular;
+  font-size: 96px;
+  opacity: 1;
+  text-align: center;
+}
+.moeda-gato {
+  width: 59px;
+  height: 55px;
+  background: url("../images/moeda-gato.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 40px;
+  left: 0px;
+  overflow: hidden;
+}
+.itens-orpimento {    
+  width: 227px;
+  height: 432px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 10px;
+  left: 19px;
+  overflow: hidden;
+}
+.orpimento {
+  width: 206px;
+  height: 195px;
+  /* background: rgba(255,255,255,1); */
+  opacity: 1;
+  position: absolute;
+  top: 4px;
+  left: 14px;
+  overflow: hidden;
+}
+.orpimento-image {
+  width: 206px;
+  height: 195px;
+  background: url("../images/orpimento-image.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+.efeito-orpimento {
+  width: 220px;
+  height: 170px;
+  opacity: 1;
+  position: absolute;
+  top: 185px;
+  left: 5px;
+  overflow: hidden;
+  text-align: center;
+}
+.titulo-efeito-orpimento {
+  width: 231px;
+  color: rgba(255,255,255,1);
+  position: relative;
+  top: 0px;
+  left: 0px;
+  font-family: Stardew Valley;
+  font-weight: Regular;
+  opacity: 1;
+  text-align: center;
+  font-size: 50px;
+}
+.descricao-efeito-orpimento {
+  width: 231px;
+  color: rgba(255,255,255,1);
+  position: relative;
+  top: 0px;
+  left: 0px;
+  font-family: Stardew Valley;
+  font-weight: Regular;
+  opacity: 1;
+  text-align: center;
+  font-size: 29px;
+}
+.valor-orpimento {
+  width: 109px;
+    height: 83px;
+    opacity: 1;
+    position: absolute;
+    top: 350px;
+    left: 62px;
+    overflow: hidden;
+}
+.descricao-valor-orpimento {
+  height: 82px;
+  width: 45px;
+  color: rgba(255,255,255,1);
+  position: absolute;
+  top: -10px;
+  left: 64px;
+  font-family: Stardew Valley;
+  font-weight: Regular;
+  font-size: 96px;
+  opacity: 1;
+  text-align: center;
+}
+.moeda-orpimento {    
+  width: 59px;
+  height: 55px;
+  background: url(../images/moeda-orpimento.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 10px;
+  left: 0px;
+  overflow: hidden;
+}
+.itens-junimo {
+  width: 260px;
+  height: 417px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 12px;
+  left: 467px;
+  overflow: hidden;
+}
+.valor-junimo {
+  width: 109px;
+  height: 98px;
+  /* background: rgba(255,255,255,1); */
+  opacity: 1;
+  position: absolute;
+  top: 335px;
+  left: 75px;
+  overflow: hidden;
+}
+.descricao-valor-junimo {
+  width: 40px;
+  color: rgba(255,255,255,1);
+  position: absolute;
+  top: 0px;
+  left: 66px;
+  font-family: Stardew Valley;
+  font-weight: Regular;
+  font-size: 96px;
+  opacity: 1;
+  text-align: center;
+}
+.moeda-junimo {
+  width: 59px;
+  height: 55px;
+  background: url("../images/moeda-junimo.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 22px;
+  left: 0px;
+  overflow: hidden;
+}
+.efeito-junimo {
+  width: 235px;
+  height: 130px;
+  /* background: rgba(255,255,255,1); */
+  opacity: 1;
+  position: absolute;
+  top: 210px;
+  left: 20px;
+  overflow: hidden;
+  text-align: center;
+}
+.titulo-efeito-junimo {
+  width: 246px;
+  color: rgba(255,255,255,1);
+  position: relative;
+  top: 0px;
+  left: 0px;
+  font-family: Stardew Valley;
+  font-weight: Regular;
+  opacity: 1;
+  text-align: center;
+  font-size: 50px;
+}
+.descricao-efeito-junimo {
+  width: 246px;
+  color: rgba(255,255,255,1);
+  position: relative;
+  top: 0px;
+  left: 0px;
+  font-family: Stardew Valley;
+  font-weight: Regular;
+  opacity: 1;
+  text-align: center;
+  font-size: 30px;
+}
+.junimo {
+  width: 206px;
+  height: 195px;
+  /* background: rgba(255,255,255,1); */
+  opacity: 1;
+  position: absolute;
+  top: 10px;
+  left: 28px;
+  overflow: hidden;
+}
+.junimo-image {
+  width: 206px;
+  height: 195px;
+  background: url("../images/junimo-image.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+.mochila {
+  width: 744px;
+    height: 123px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 475px;
+    left: 310px;
+    overflow: hidden;
+}
+.itens-mochila {
+  width: 713px;
+  height: 100px;
+  /*background: rgba(196,196,196,0);*/
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 13px;
+  border: 8px solid rgba(255,255,255,1);
+  overflow: hidden;
+}
+.itens-mochila-junimo {
+  width: 237px;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 9px;
+  left: 23px;
+  overflow: hidden;
+}
+.mochila-junimo {
+  width: 117px;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+.mochila-junimo-image {
+  width: 101px;
+  height: 96px;
+  background: url("../images/mochila-junimo-image.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 2px;
+  left: 8px;
+  overflow: hidden;
+}
+.qtd-mochila-junimo {
+  width: 120px;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 117px;
+  overflow: hidden;
+}
+.span-mochila-junimo {
+  width: 120px;
+  color: rgba(255,255,255,1);
+  position: absolute;
+  top: 2px;
+  left: 0px;
+  font-family: Stardew Valley;
+  font-weight: Regular;
+  font-size: 96px;
+  opacity: 1;
+  text-align: center;
+}
+.itens-mochila-gato {
+  width: 221px;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 8px;
+  left: 261px;
+  overflow: hidden;
+}
+.mochila-gato {
+  width: 106px;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+.mochila-gato-image {
+  width: 69px;
+  height: 100px;
+  background: url("../images/mochila-gato-image.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+.qtd-mochila-gato {
+  width: 102px;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 70px;
+  overflow: hidden;
+}
+.span-mochila-gato {
+  width: 120px;
+  color: rgba(255,255,255,1);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  font-family: Stardew Valley;
+  font-weight: Regular;
+  font-size: 96px;
+  opacity: 1;
+  text-align: center;
+}
+.itens-mochila-orpimento {
+  width: 237px;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 8px;
+  left: 490px;
+  overflow: hidden;
+}
+.mochila-orpimento {
+  width: 118px;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 119px;
+  overflow: hidden;
+}
+.span-mochila-orpimento {
+  width: 120px;
+  color: rgba(255,255,255,1);
+  position: absolute;
+  top: 2px;
+  left: 0px;
+  font-family: Stardew Valley;
+  font-weight: Regular;
+  font-size: 96px;
+  opacity: 1;
+  text-align: center;
+}
+.qtd-mochila-orpimento {
+  width: 119px;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+.mochila-orpimento-image {
+  width: 116px;
+  height: 100px;
+  background: url("../images/mochila-orpimento-image.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  overflow: hidden;
+}
