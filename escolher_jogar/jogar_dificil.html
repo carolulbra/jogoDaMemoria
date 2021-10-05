@@ -11,6 +11,12 @@
 
 <body>
     <section class="memory-game">
+
+        <section class="infos">
+            <span id="pontos">**</span>Pontos
+            <span id="timer">**</span>Segundos
+        </section>
+
         <div class="memory-card" data-framework="feiticeiro">
             <img class="front-face" src="feiticeiro.png" alt="feiticeiro" />
             <img class="back-face" src="backface.png" alt="SV" />
@@ -174,7 +180,10 @@
         </div>
     </section>
 
-    <script src="jogar_facil.js"></script>
+    <input name="time" id="time" value="90" hidden>
+    <! tempo cronometro >
+
+    <script src="jogar_dificil.js"></script>
 </body>
 
 </html>

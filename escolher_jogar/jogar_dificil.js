@@ -42,7 +42,7 @@ function checkForMatch() {
         //}
         cardsEncontrados++;
 
-        if (cardsEncontrados === 2) {
+        if (cardsEncontrados === 8) {
             reset();
             return;
         }
@@ -55,7 +55,7 @@ function checkForMatch() {
 }
 
 function pontuacao() {
-    iniciopontuacao = iniciopontuacao + 5;
+    iniciopontuacao = iniciopontuacao + 20;
     pontos.textContent = `${iniciopontuacao}`;
 }
 
@@ -71,9 +71,9 @@ function reset() {
     //lockBoard = true;
     setTimeout(() => {
         cardsEncontrados = 0;
-        iniciopontuacao = iniciopontuacao + 20;
+        iniciopontuacao = iniciopontuacao + 150;
         pontuacao();
-        seg = 20;
+        seg = 45;
         cards.forEach(card => card.classList.remove('flip'));
         [hasFlippedCard, lockBoard] = [false, false];
         cards.forEach(card => [card] = [null]);
