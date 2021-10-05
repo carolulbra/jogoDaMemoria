@@ -7,12 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adicionar Nome ao Ranking</title>
     <link rel="stylesheet" href="acessarRanking.css">
+    <link rel="stylesheet" href="jogar_facil.css">
 </head>
 
 <body>
 
     <header>
         <h1 id="logo">Jogo da <br>Memoria</h1>
+        <h1>Total de <span id="pontos">**</span> Pontos</h1> 
         <h1>Adicionar nome ao Ranking:</h1>
     </header>
 
@@ -21,6 +23,15 @@
         <input type="submit" value="Confirmar">
         <input type="button" onclick="javascript:window.location='index.html';" value="Cancelar">
     </form>
+
+    <! Cravei o script aqui mas tem que criar um arquivo separado >
+     <script>
+        var pontos = document.querySelector('#pontos')
+        const urlParams = new URLSearchParams(window.location.search);
+        const myParam = urlParams.get('pontos');
+       pontos.textContent = `${myParam}`;    
+     </script>
+
 
 </body>
 
