@@ -1,28 +1,10 @@
-/** {
-  box-sizing: border-box;
-}
-body {
-  font-size: 14px;
-}
-.v12_7 {
-  width: 100%;
-  height: 1024px;
-  background: rgba(255,255,255,1);
-  opacity: 1;
-  position: relative;
-  top: 0px;
-  left: 0px;
-  overflow: hidden;
-}*/
-
 body {
   display: block;
   margin: 0px;
 }
-.v58_109 {
+.main {
   width: 100%;
   height: 1080px;
-  /* background: rgba(255,255,255,1); */
   opacity: 1;
   top: 14px;
   left: 447px;
@@ -41,32 +23,7 @@ body {
   left: 0px;
   overflow: hidden;
 }
-.v12_19 {
-  /* width: 100%;
-  height: 600px;
-  background: url("../images/v12_19.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  opacity: 1;
-  position: absolute;
-  top: 226px;
-  left: 631px;
-  overflow: hidden; */
-
-  /* width: 100%;
-  height: 50px;
-  line-height: 50px;
-  text-align:center;
-  background-color: rgba(10,23,55,0.7);
-  color: white; */
-  
-  /* pura mágica */
-  /* position: absolute;
-  /* top: 50%; posiciona na metade da tela
-  margin-top: -25px; e retrocede metade da altura */
-
-  
+.loja {  
   width: 1090px;
   height: 610px;
   position: absolute;
@@ -76,17 +33,7 @@ body {
   margin-top: -25px;
   background: rgba(185,154,73,0.7200000286102295);
 }
-.v12_18 {
-  width: 100%;
-  height: 600px;
-  background: rgba(185,154,73,0.7200000286102295);
-  opacity: 1;
-  position: absolute;
-  top: 0px;
-  left: 2px;
-  overflow: hidden;
-}
-.v12_20 {
+.personagem {
   width: 298px;
   height: 574px;
   background: url("../images/v12_20.png");
@@ -99,7 +46,7 @@ body {
   left: 16px;
   overflow: hidden;
 }
-.v58_107 {
+.marlon {
   width: 250px;
   height: 225px;
   /* background: rgba(255,255,255,1); */
@@ -109,10 +56,10 @@ body {
   left: 29px;
   overflow: hidden;
 }
-.v12_21 {
+.marlon-image {
   width: 234px;
   height: 205px;
-  background: url("../images/v12_21.png");
+  background: url("../images/marlon.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -122,7 +69,7 @@ body {
   left: 4px;
   overflow: hidden;
 }
-.v12_22 {
+.marlon-moldura {
   width: 230px;
   height: 203px;
   /* background: rgb(255, 255, 255); */
@@ -133,10 +80,9 @@ body {
   border: 8px solid rgba(255,255,255,1);
   overflow: hidden;
 }
-.v12_24 {
+.mensagem {
   width: 264px;
   height: 310px;
-  background: url("../images/v12_24.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -146,7 +92,7 @@ body {
   left: 14px;
   overflow: hidden;
 }
-.v12_23 {
+.mensagem-span {
   width: 260px;
   color: rgba(255,255,255,1);
   position: absolute;
@@ -158,10 +104,9 @@ body {
   opacity: 1;
   text-align: center;
 }
-.v12_27 {
+.itens {
   width: 750px;
   height: 450px;
-  background: url("../images/v12_27.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -171,7 +116,7 @@ body {
   left: 308px;
   overflow: hidden;
 }
-.v12_28 {
+.itens-grupo {
   width: 713px;
   height: 424px;
   background: rgba(196,196,196,0);
@@ -182,10 +127,9 @@ body {
   border: 8px solid rgba(255,255,255,1);
   overflow: hidden;
 }
-.v12_42 {
+.itens-gato {
   width: 221px;
-  height: 424px;
-  background: url("../images/v12_42.png");
+  height: 436px;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -195,7 +139,7 @@ body {
   left: 246px;
   overflow: hidden;
 }
-.v58_106 {
+.gato {
   width: 142px;
   height: 219px;
   /* background: rgba(255,255,255,1); */
@@ -205,10 +149,10 @@ body {
   left: 40px;
   overflow: hidden;
 }
-.v12_37 {
+.gato-image {
   width: 142px;
   height: 219px;
-  background: url("../images/v12_37.png");
+  background: url("../images/gato-image.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -218,7 +162,7 @@ body {
   left: 0px;
   overflow: hidden;
 }
-.v58_105 {
+.efeito-gato {
   width: 200px;
   height: 100px;
   /* background: rgba(255,255,255,1); */
@@ -227,8 +171,9 @@ body {
   top: 235px;
   left: 10px;
   overflow: hidden;
+  text-align: center;
 }
-.v12_45 {
+.titulo-efeito-gato {
   width: 218px;
   color: rgba(255,255,255,1);
   position: relative;
@@ -238,8 +183,21 @@ body {
   font-weight: Regular;
   opacity: 1;
   text-align: center;
+  font-size: 50px;
 }
-.v12_51 {
+.descricao-efeito-gato {
+  width: 218px;
+  color: rgba(255,255,255,1);
+  position: relative;
+  top: 0px;
+  left: 0px;
+  font-family: Stardew Valley;
+  font-weight: Regular;
+  opacity: 1;
+  text-align: center;
+  font-size: 35px;
+}
+.valor-gato {
   width: 109px;
   height: 98px;
   /* background: rgba(255,255,255,1); */
@@ -249,11 +207,11 @@ body {
   left: 62px;
   overflow: hidden;
 }
-.v12_52 {
+.descricao-valor-gato {
   width: 40px;
   color: rgba(255,255,255,1);
   position: absolute;
-  top: 0px;
+  top: 15px;
   left: 66px;
   font-family: Stardew Valley;
   font-weight: Regular;
@@ -261,23 +219,22 @@ body {
   opacity: 1;
   text-align: center;
 }
-.v12_53 {
+.moeda-gato {
   width: 59px;
   height: 55px;
-  background: url("../images/v12_53.png");
+  background: url("../images/moeda-gato.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   opacity: 1;
   position: absolute;
-  top: 22px;
+  top: 40px;
   left: 0px;
   overflow: hidden;
 }
-.v12_40 {
+.itens-orpimento {    
   width: 227px;
-  height: 417px;
-  background: url("../images/v12_40.png");
+  height: 432px;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -287,7 +244,7 @@ body {
   left: 19px;
   overflow: hidden;
 }
-.v58_104 {
+.orpimento {
   width: 206px;
   height: 195px;
   /* background: rgba(255,255,255,1); */
@@ -297,10 +254,10 @@ body {
   left: 14px;
   overflow: hidden;
 }
-.v12_34 {
+.orpimento-image {
   width: 206px;
   height: 195px;
-  background: url("../images/v12_34.png");
+  background: url("../images/orpimento-image.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -310,17 +267,17 @@ body {
   left: 0px;
   overflow: hidden;
 }
-.v58_103 {
+.efeito-orpimento {
   width: 220px;
-  height: 120px;
-  /* background: rgba(255,255,255,1); */
+  height: 170px;
   opacity: 1;
   position: absolute;
-  top: 200px;
+  top: 185px;
   left: 5px;
   overflow: hidden;
+  text-align: center;
 }
-.v12_46 {
+.titulo-efeito-orpimento {
   width: 231px;
   color: rgba(255,255,255,1);
   position: relative;
@@ -330,22 +287,35 @@ body {
   font-weight: Regular;
   opacity: 1;
   text-align: center;
+  font-size: 50px;
 }
-.v12_50 {
-  width: 109px;
-  height: 98px;
-  /* background: rgba(255,255,255,1); */
+.descricao-efeito-orpimento {
+  width: 231px;
+  color: rgba(255,255,255,1);
+  position: relative;
+  top: 0px;
+  left: 0px;
+  font-family: Stardew Valley;
+  font-weight: Regular;
   opacity: 1;
-  position: absolute;
-  top: 319px;
-  left: 62px;
-  overflow: hidden;
+  text-align: center;
+  font-size: 29px;
 }
-.v12_47 {
+.valor-orpimento {
+  width: 109px;
+    height: 83px;
+    opacity: 1;
+    position: absolute;
+    top: 350px;
+    left: 62px;
+    overflow: hidden;
+}
+.descricao-valor-orpimento {
+  height: 82px;
   width: 45px;
   color: rgba(255,255,255,1);
   position: absolute;
-  top: 0px;
+  top: -10px;
   left: 64px;
   font-family: Stardew Valley;
   font-weight: Regular;
@@ -353,23 +323,22 @@ body {
   opacity: 1;
   text-align: center;
 }
-.v12_48 {
+.moeda-orpimento {    
   width: 59px;
   height: 55px;
-  background: url("../images/v12_48.png");
+  background: url(../images/moeda-orpimento.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   opacity: 1;
   position: absolute;
-  top: 22px;
+  top: 10px;
   left: 0px;
   overflow: hidden;
 }
-.v12_41 {
+.itens-junimo {
   width: 260px;
   height: 417px;
-  background: url("../images/v12_41.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -379,17 +348,17 @@ body {
   left: 467px;
   overflow: hidden;
 }
-.v12_55 {
+.valor-junimo {
   width: 109px;
   height: 98px;
   /* background: rgba(255,255,255,1); */
   opacity: 1;
   position: absolute;
-  top: 319px;
+  top: 335px;
   left: 75px;
   overflow: hidden;
 }
-.v12_56 {
+.descricao-valor-junimo {
   width: 40px;
   color: rgba(255,255,255,1);
   position: absolute;
@@ -401,10 +370,10 @@ body {
   opacity: 1;
   text-align: center;
 }
-.v12_57 {
+.moeda-junimo {
   width: 59px;
   height: 55px;
-  background: url("../images/v12_57.png");
+  background: url("../images/moeda-junimo.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -414,17 +383,18 @@ body {
   left: 0px;
   overflow: hidden;
 }
-.v58_101 {
+.efeito-junimo {
   width: 235px;
-  height: 107px;
+  height: 130px;
   /* background: rgba(255,255,255,1); */
   opacity: 1;
   position: absolute;
   top: 210px;
   left: 20px;
   overflow: hidden;
+  text-align: center;
 }
-.v12_43 {
+.titulo-efeito-junimo {
   width: 246px;
   color: rgba(255,255,255,1);
   position: relative;
@@ -434,8 +404,21 @@ body {
   font-weight: Regular;
   opacity: 1;
   text-align: center;
+  font-size: 50px;
 }
-.v58_102 {
+.descricao-efeito-junimo {
+  width: 246px;
+  color: rgba(255,255,255,1);
+  position: relative;
+  top: 0px;
+  left: 0px;
+  font-family: Stardew Valley;
+  font-weight: Regular;
+  opacity: 1;
+  text-align: center;
+  font-size: 30px;
+}
+.junimo {
   width: 206px;
   height: 195px;
   /* background: rgba(255,255,255,1); */
@@ -445,10 +428,10 @@ body {
   left: 28px;
   overflow: hidden;
 }
-.v58_100 {
+.junimo-image {
   width: 206px;
   height: 195px;
-  background: url("../images/v58_100.png");
+  background: url("../images/junimo-image.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -458,10 +441,9 @@ body {
   left: 0px;
   overflow: hidden;
 }
-.v12_32 {
+.mochila {
   width: 744px;
     height: 123px;
-    background: url(../images/v12_32.png);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -471,10 +453,10 @@ body {
     left: 310px;
     overflow: hidden;
 }
-.v12_33 {
+.itens-mochila {
   width: 713px;
   height: 100px;
-  background: rgba(196,196,196,0);
+  /*background: rgba(196,196,196,0);*/
   opacity: 1;
   position: absolute;
   top: 0px;
@@ -482,10 +464,9 @@ body {
   border: 8px solid rgba(255,255,255,1);
   overflow: hidden;
 }
-.v58_89 {
+.itens-mochila-junimo {
   width: 237px;
   height: 100px;
-  background: url(../images/v58_89.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -495,10 +476,9 @@ body {
   left: 23px;
   overflow: hidden;
 }
-.v58_92 {
+.mochila-junimo {
   width: 117px;
   height: 100px;
-  background: url("../images/v58_92.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -508,10 +488,10 @@ body {
   left: 0px;
   overflow: hidden;
 }
-.v58_93 {
+.mochila-junimo-image {
   width: 101px;
   height: 96px;
-  background: url("../images/v58_93.png");
+  background: url("../images/mochila-junimo-image.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -521,10 +501,9 @@ body {
   left: 8px;
   overflow: hidden;
 }
-.v12_61 {
+.qtd-mochila-junimo {
   width: 120px;
   height: 100px;
-  background: url("../images/v12_61.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -534,7 +513,7 @@ body {
   left: 117px;
   overflow: hidden;
 }
-.v12_62 {
+.span-mochila-junimo {
   width: 120px;
   color: rgba(255,255,255,1);
   position: absolute;
@@ -546,10 +525,9 @@ body {
   opacity: 1;
   text-align: center;
 }
-.v58_81 {
+.itens-mochila-gato {
   width: 221px;
   height: 100px;
-  background: url("../images/v58_81.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -559,10 +537,9 @@ body {
   left: 261px;
   overflow: hidden;
 }
-.v12_67 {
+.mochila-gato {
   width: 106px;
   height: 100px;
-  background: url("../images/v12_67.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -572,10 +549,10 @@ body {
   left: 0px;
   overflow: hidden;
 }
-.v12_70 {
+.mochila-gato-image {
   width: 69px;
   height: 100px;
-  background: url("../images/v12_70.png");
+  background: url("../images/mochila-gato-image.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -585,10 +562,9 @@ body {
   left: 0px;
   overflow: hidden;
 }
-.v58_78 {
+.qtd-mochila-gato {
   width: 102px;
   height: 100px;
-  background: url("../images/v58_78.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -598,7 +574,7 @@ body {
   left: 70px;
   overflow: hidden;
 }
-.v58_80 {
+.span-mochila-gato {
   width: 120px;
   color: rgba(255,255,255,1);
   position: absolute;
@@ -610,10 +586,9 @@ body {
   opacity: 1;
   text-align: center;
 }
-.v58_86 {
+.itens-mochila-orpimento {
   width: 237px;
   height: 100px;
-  background: url("../images/v58_86.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -623,10 +598,9 @@ body {
   left: 490px;
   overflow: hidden;
 }
-.v12_63 {
+.mochila-orpimento {
   width: 118px;
   height: 100px;
-  background: url("../images/v12_63.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -636,7 +610,7 @@ body {
   left: 119px;
   overflow: hidden;
 }
-.v12_65 {
+.span-mochila-orpimento {
   width: 120px;
   color: rgba(255,255,255,1);
   position: absolute;
@@ -648,10 +622,9 @@ body {
   opacity: 1;
   text-align: center;
 }
-.v58_83 {
+.qtd-mochila-orpimento {
   width: 119px;
   height: 100px;
-  background: url("../images/v58_83.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -661,10 +634,10 @@ body {
   left: 0px;
   overflow: hidden;
 }
-.v58_85 {
+.mochila-orpimento-image {
   width: 116px;
   height: 100px;
-  background: url("../images/v58_85.png");
+  background: url("../images/mochila-orpimento-image.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
