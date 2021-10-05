@@ -14,6 +14,9 @@ let timer = document.querySelector('#timer');
 let iniciopontuacao = 0;
 let pontos = document.querySelector('#pontos')
 
+let totalmoedas = 0;
+let moedas = document.querySelector('#moedas')
+
 let numeroJogadas = 0;
 
 
@@ -59,6 +62,11 @@ function pontuacao() {
     pontos.textContent = `${iniciopontuacao}`;
 }
 
+function atualizamoedas() {
+    totalmoedas = totalmoedas+1;
+    moedas.textContent = `${totalmoedas}`;
+}
+
 function disableCards() {
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
@@ -73,6 +81,7 @@ function reset() {
         cardsEncontrados = 0;
         iniciopontuacao = iniciopontuacao + 20;
         pontuacao();
+        atualizamoedas();
         seg = 20;
         cards.forEach(card => card.classList.remove('flip'));
         [hasFlippedCard, lockBoard] = [false, false];
@@ -121,7 +130,7 @@ currentTimer = setInterval(() => {
 
 function finalizarJogo(flag) {
     if (flag === 1)
-        window.location = '../Ranking/adicionarNomeRanking.html'
+        window.location = '../Ranking/adicionarNomeRanking.html?pontos='+iniciopontuacao
     seg = 100000;
 }
 
