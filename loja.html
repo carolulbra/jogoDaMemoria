@@ -11,6 +11,12 @@
 
             $('.image').click(function(){
 
+                $.getJSON( "db.json", function(data) {
+                    $.each(result, function(i, field){
+                        var item = append(field + " ");
+                        alert(item);
+                    });
+                });
                 var valor = 1;
                 var itemSelecionado = $('#item').html();
                 var resultado = confirm("Deseja comprar o item: " + itemSelecionado + " ?");

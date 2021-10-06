@@ -15,6 +15,8 @@
         "valor": 0
     },
     {
-        "moedas": 0
+        "id": "4",
+        "nome": "moedas",
+        "valor": 0
     }
 ]
