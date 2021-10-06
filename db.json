@@ -1,0 +1,20 @@
+[
+    {
+        "id": "1",
+        "nome": "orpimento",
+        "valor": 0
+    },
+    {
+        "id": "2",
+        "nome": "gato",
+        "valor": 0
+    },
+    {
+        "id": "3",
+        "nome": "junimo",
+        "valor": 0
+    },
+    {
+        "moedas": 0
+    }
+]

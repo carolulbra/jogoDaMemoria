@@ -247,8 +247,6 @@ html,body {
   justify-content: space-evenly;
   align-items: center;
 }
-.mochila-junimo {
-}
 .mochila-junimo-image {    
   width: 60px;
   height: 60px;
@@ -259,18 +257,12 @@ html,body {
   opacity: 1;
 
 }
-.qtd-mochila {
-}
 .span-mochila {    
   color: rgba(255,255,255,1);
   font-family: StardewValley;
   font-size: 50px;
   opacity: 1;
   text-align: center;
-}
-.itens-mochila-gato {
-}
-.mochila-gato {
 }
 .mochila-gato-image {    
   width: 52px;
@@ -281,10 +273,6 @@ html,body {
   background-size: cover;
   opacity: 1;
 }
-.itens-mochila-orpimento {
-}
-.mochila-orpimento {
-}
 .mochila-orpimento-image {
   width: 80px;
   height: 80px;
@@ -292,4 +280,30 @@ html,body {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+}
+
+.sair {
+  width: 744px;
+  height: 60px;
+}
+
+.link-sair {
+  width: 724px;
+  height: 50px;
+  opacity: 1;
+  border: 8px solid rgba(255,255,255,1);
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+  left: 10px;
+}
+
+.a-sair {
+  width: 744px;
+  height: 50px;
+  color: rgba(255,255,255,1);
+  font-family: StardewValley;
+  opacity: 1;
+  font-size: 25px;
+  text-decoration: none;
 }

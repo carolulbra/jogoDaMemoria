@@ -2,9 +2,27 @@
 <html>
 <head>
     <link href="https://fonts.googleapis.com/css?family=Stardew+Valley&display=swap" rel="stylesheet" />
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Loja</title>
     <link href="./css/loja.css" rel="stylesheet" />
+    <script>
+        $(document).ready(function(){
+            
+
+            $('.image').click(function(){
+
+                var valor = 1;
+                var itemSelecionado = $('#item').html();
+                var resultado = confirm("Deseja comprar o item: " + itemSelecionado + " ?");
+                if (resultado == true) {
+                    valor++;
+                    alert("O item " + itemSelecionado + " foi comprado com sucesso!");    
+                }
+                $("#valor").html(valor);
+
+            });
+        });
+    </script>
 </head>
 <body>
     <div class="bg">
@@ -23,10 +41,12 @@
                         <div class="itens-grupo">
                             <div class="itens-descricao">
                                 <div class="orpimento">
-                                    <div class="orpimento-image"></div>
+                                    <div class="image">
+                                        <div class="orpimento-image"></div>
+                                    </div>
                                 </div>
                                 <div class="efeito">
-                                    <span class="titulo">Orpimento</span>
+                                    <span class="titulo" id="item">Orpimento</span>
                                     <span class="descricao">dobra a quantidade de pontos por par por 10 segundos</span>
                                 </div>
                                 <div class="valor">
@@ -71,7 +91,8 @@
                                 <div class="mochila-junimo-image"></div>
                             </div>
                             <div class="qtd-mochila">
-                                <span class="span-mochila">x2</span>
+                                <span class="span-mochila">x</span>
+                                <span class="span-mochila">2</span>
                             </div>
                         </div>
                         <div class="itens-mochila-personagens">
@@ -79,7 +100,8 @@
                                 <div class="mochila-gato-image"></div>
                             </div>
                             <div class="qtd-mochila">
-                                <span class="span-mochila">x5</span>
+                                <span class="span-mochila">x</span>
+                                <span class="span-mochila">5</span>
                             </div>
                         </div>
                         <div class="itens-mochila-personagens">
@@ -87,9 +109,15 @@
                                 <div class="mochila-orpimento-image"></div>
                             </div>
                                 <div class="qtd-mochila">
-                                    <span class="span-mochila">x1</span>
+                                    <span class="span-mochila">x</span>
+                                    <span class="span-mochila" id="valor"></span>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div class="sair">
+                    <div class="link-sair">
+                        <a href='index.html' class="a-sair">Voltar</a>
                     </div>
                 </div>
                 </div>
