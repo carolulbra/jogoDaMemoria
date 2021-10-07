@@ -1,4 +1,9 @@
-[
+[   
+    {
+        "id": "0",
+        "nome": "este db.json não funciona, mas pode funcionar futuramente com AJAX, por enquanto usamos localStorage como banco de dados",
+        "valor": 0
+    },
     {
         "id": "1",
         "nome": "orpimento",
