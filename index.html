@@ -9,22 +9,21 @@
     <script>
         $(document).ready(function() {
             
-
             if(!localStorage.getItem("admin")) 
                 localStorage.setItem("admin", '0');
 
-            function tecla(){
+            function acessaAdmin(){
                 var admin = event.keyCode;
                 var adminStorage = localStorage.getItem("admin") + String(admin);
                 localStorage.setItem("admin", adminStorage);
-            }
-            document.body.onkeypress = tecla;
-            
-            var valor = 097100109105110;
-            if(localStorage.getItem("admin") == valor){
+                var valor = 097100109105110;
+                if(localStorage.getItem("admin") == valor){
                     window.location.href = "admin/telaAdmin.html";
                     localStorage.removeItem("admin");
-            };
+                };
+            }
+            document.body.onkeypress = acessaAdmin;
+            
             /*admin
             97 = a
             100 = d
