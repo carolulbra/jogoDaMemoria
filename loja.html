@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link href="https://fonts.googleapis.com/css?family=Stardew+Valley&display=swap" rel="stylesheet" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--link href="https://fonts.googleapis.com/css?family=Stardew+Valley&display=swap" rel="stylesheet" />
+    --><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Loja</title>
+        
     <link href="./css/loja.css" rel="stylesheet" />
     <script>
         $(document).ready(function(){
@@ -71,7 +72,6 @@
             };
 
             function verificaMochila(itemSelecionado){
-                alert(itemSelecionado);
                 if(itemSelecionado == 'Orpimento'){
 
                     if(localStorage.getItem('mochila') >= valorOrpimento){
