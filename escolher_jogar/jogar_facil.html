@@ -3,40 +3,58 @@
 
 <head>
     <meta charset="UTF-8">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Memory Game</title>
 
     <link rel="stylesheet" href="jogar_facil.css">
 </head>
 
 <body>
-    <section class="memory-game">
-
-        <section class="infos">
-            <span id="pontos">**</span>Pontos
-            <span id="timer">**</span>Segundos
-            <span id="moedas">**</span>Moedas
+    <div class="bg">
+        <section class="memory-game">
+            <div class="memory-card" data-framework="feiticeiro">
+                <img class="front-face" src="feiticeiro.png" alt="feiticeiro" />
+                <img class="back-face" src="backface.png" alt="SV" />
+            </div>
+            <div class="memory-card" data-framework="feiticeiro">
+                <img class="front-face" src="feiticeiro.png" alt="feiticeiro" />
+                <img class="back-face" src="backface.png" alt="SV" />
+            </div>
+            <div class="memory-card" data-framework="krobus">
+                <img class="front-face" src="krobus.png" alt="krobus" />
+                <img class="back-face" src="backface.png" alt="SV" />
+            </div>
+            <div class="memory-card" data-framework="krobus">
+                <img class="front-face" src="krobus.png" alt="krobus" />
+                <img class="back-face" src="backface.png" alt="SV" />
+            </div>
         </section>
-
-        <div class="memory-card" data-framework="feiticeiro">
-            <img class="front-face" src="feiticeiro.png" alt="feiticeiro" />
-            <img class="back-face" src="backface.png" alt="SV" />
+        <div class="infos">
+                <div class="item">
+                    <span id="pontos">--</span>
+                    <span id="pontos">Pontos</span>
+                </div>
+                <div class="item">
+                    <span id="timer">--</span>
+                    <span id="timer">Segundos</span>
+                </div>
+                <div class="item">
+                    <span id="moedas">--</span>
+                    <span id="moedas">Moedas</span>
+                </div>
+                <div class="orpimento">
+                    <span class="valor-orpimento"></span>
+                </div>
+                <div class="gato">
+                    <span class="valor-gato"></span>
+                </div>
+                <div class="junimo">
+                    <span class="valor-junimo"></span>
+                </div>
         </div>
-        <div class="memory-card" data-framework="feiticeiro">
-            <img class="front-face" src="feiticeiro.png" alt="feiticeiro" />
-            <img class="back-face" src="backface.png" alt="SV" />
-        </div>
-        <div class="memory-card" data-framework="krobus">
-            <img class="front-face" src="krobus.png" alt="krobus" />
-            <img class="back-face" src="backface.png" alt="SV" />
-        </div>
-        <div class="memory-card" data-framework="krobus">
-            <img class="front-face" src="krobus.png" alt="krobus" />
-            <img class="back-face" src="backface.png" alt="SV" />
-        </div>
-    </section>
-    <input name="time" id="time" value="10" hidden>
-    <! tempo cronometro >
+        <input name="time" id="time" value="10" hidden>
+        <! tempo cronometro >
+    </div>
     <script src="jogar_facil.js"></script>
 </body>
 
