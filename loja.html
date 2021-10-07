@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Stardew+Valley&display=swap" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Loja</title>
+    <link href="./css/loja.css" rel="stylesheet" />
+    <script>
+        $(document).ready(function(){
+            
+            if(!localStorage.getItem("Orpimento")) localStorage.setItem("Orpimento",'0');
+            if(!localStorage.getItem("Gato")) localStorage.setItem("Gato",'0');
+            if(!localStorage.getItem("Junimo Roxo")) localStorage.setItem("Junimo Roxo",'0');
+            if(!localStorage.getItem('mochila')) localStorage.setItem('mochila','0');
+
+            atualizaValorHtml();
+
+            var valorOrpimento = 8;
+            var valorGato = 2;
+            var valorJunimo = 4;
+
+            $('#orpimento').click(function(){
+                var teste = '#titulo-orpimento';
+                var descricaoValor = "#valor-orpimento";
+                comprarBoosters(teste);
+            });
+            $('#gato').click(function(){
+                var teste = '#titulo-gato';
+                var descricaoValor = "#valor-gato";
+                comprarBoosters(teste);
+            });
+            $('#junimo').click(function(){
+                var teste = '#titulo-junimo';
+                var descricaoValor = "#valor-junimo";
+                comprarBoosters(teste);
+            });
+
+            function comprarBoosters(teste, descricaoValor){
+
+                var itemSelecionado = $(teste).html();
+                
+                if(verificaMochila(itemSelecionado)){
+
+                    var resultado = confirm("Deseja comprar o item: " + itemSelecionado + "?");
+
+                    if (resultado == true) atualizaStorage(itemSelecionado, descricaoValor);
+
+                }else alert("Não há moedas suficientes para comprar este item.");
+            };
+
+            function atualizaStorage(itemSelecionado, descricaoValor){
+
+                var valor = localStorage.getItem(itemSelecionado);
+                valor = parseInt(valor) + 1;
+
+                var valorStorage = String(valor);
+                localStorage.setItem(itemSelecionado, valorStorage);   
+
+                $(descricaoValor).html(valor);
+
+                alert("O item " + itemSelecionado + " foi comprado com sucesso!");
+
+                atualizaValorHtml();
+            };
+
+            function atualizaValorHtml(){
+                $("#valor-orpimento").html(localStorage.getItem("Orpimento"));
+                $("#valor-gato").html(localStorage.getItem("Gato"));
+                $("#valor-junimo").html(localStorage.getItem("Junimo Roxo"));
+                $("#valor-mochila").html(localStorage.getItem("mochila"));
+            };
+
+            function verificaMochila(itemSelecionado){
+                alert(itemSelecionado);
+                if(itemSelecionado == 'Orpimento'){
+
+                    if(localStorage.getItem('mochila') >= valorOrpimento){
+                        var valor = localStorage.getItem('mochila');
+                        valor = valor - valorOrpimento;
+                        var valorStorage = String(valor);
+                        localStorage.setItem('mochila', valorStorage);
+
+                        return(true);
+
+                    }else return(false);
+
+                }else if(itemSelecionado == 'Gato'){
+
+                    if(localStorage.getItem('mochila') >= valorGato){
+                        var valor = localStorage.getItem('mochila');
+                        valor = valor - valorGato;
+                        var valorStorage = String(valor);
+                        localStorage.setItem('mochila', valorStorage);
+
+                        return(true);
+
+                    }else return(false);
+
+                }else if(itemSelecionado == 'Junimo Roxo'){
+
+                    if(localStorage.getItem('mochila') >= valorJunimo){
+                        var valor = localStorage.getItem('mochila');
+                        valor = valor - valorJunimo;
+                        var valorStorage = String(valor);
+                        localStorage.setItem('mochila', valorStorage);
+
+                        return(true);
+
+                    }else return(false);
+
+                }else alert('Error: 420 - Item Selecionado não esperado.');
+
+                return(false);
+            };
+            
+            alert('Clique na imagem dos personagens para comprá-los.');
+        });
+    </script>
+</head>
+<body>
+    <div class="bg">
+        <div class="main">
+                <div class="loja">
+                    <div class="personagem">
+                        <div class="marlon">
+                            <div class="marlon-moldura"></div>
+                            <div class="marlon-image"></div>
+                        </div>
+                        <div class="mensagem">
+                            <span class="mensagem-span">Bem-vindo a Loja! Procurando algo para comprar?</span>
+                        </div>
+                        <div class="moedas">
+                            <div class="moeda-mochila"></div>
+                            <span class="moedas-span" id="valor-mochila"></span>
+                        </div>
+                    </div>
+                    <div class="sair">
+                        <div class="link-sair">
+                            <a href='index.html' class="a-sair">Voltar</a>
+                        </div>
+                    </div>
+                    <div class="itens">
+                        <div class="itens-grupo">
+                            <div class="itens-descricao">
+                                <div class="orpimento">
+                                    <div class="image" id="orpimento">
+                                        <div class="orpimento-image"></div>
+                                    </div>
+                                </div>
+                                <div class="efeito">
+                                    <span class="titulo" id="titulo-orpimento">Orpimento</span>
+                                    <span class="descricao">dobra a quantidade de pontos por par por 10 segundos</span>
+                                </div>
+                                <div class="valor">
+                                    <span class="descricao-valor">8</span>
+                                    <div class="moeda"></div>
+                                </div>
+                            </div>
+                            <div class="itens-descricao">
+                                <div class="image" id="gato">
+                                    <div class="gato-image"></div>
+                                </div>
+                                <div class="efeito">
+                                    <span class="titulo" id="titulo-gato">Gato</span>
+                                    <br/>
+                                    <span class="descricao">mostra um par</span>
+                                </div>
+                                <div class="valor">
+                                    <span class="descricao-valor">2</span>
+                                    <div class="moeda"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="itens-descricao">
+                                <div class="image" id="junimo">
+                                    <div class="junimo-image"></div>
+                                </div>
+                                <div class="efeito">
+                                    <span class="titulo" id="titulo-junimo">Junimo Roxo</span>
+                                    <span class="descricao">aumenta 5 segundos no tempo</span>
+                                </div>
+                                <div class="valor">
+                                    <span class="descricao-valor">4</span>
+                                    <div class="moeda"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mochila">
+                        <div class="itens-mochila">
+                        <div class="itens-mochila-personagens">
+                            <div class="mochila-junimo">
+                                <div class="mochila-junimo-image"></div>
+                            </div>
+                            <div class="qtd-mochila">
+                                <span class="span-mochila">x</span>
+                                <span class="span-mochila" id="valor-junimo"></span>
+                            </div>
+                        </div>
+                        <div class="itens-mochila-personagens">
+                            <div class="mochila-gato">
+                                <div class="mochila-gato-image"></div>
+                            </div>
+                            <div class="qtd-mochila">
+                                <span class="span-mochila">x</span>
+                                <span class="span-mochila" id="valor-gato"></span>
+                            </div>
+                        </div>
+                        <div class="itens-mochila-personagens">
+                            <div class="mochila-orpimento">
+                                <div class="mochila-orpimento-image"></div>
+                            </div>
+                                <div class="qtd-mochila">
+                                    <span class="span-mochila">x</span>
+                                    <span class="span-mochila" id="valor-orpimento"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>

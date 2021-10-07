@@ -4,20 +4,15 @@
     <title>Jogo da Memória</title>
     <meta charset="utf-8">
 
-    <style>
-        body
-        {
-            margin:0;
-            overflow:hidden;
-        }
-    </style>
+    <link href="./css/index.css" rel="stylesheet" />
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script>
-        $(function () {
+        $(document).ready(function() {
             var largura;
             var altura;
             var larguraMenu = 400;
             var alturaMenu = 300;
+            var divisor = 2;
 
             canvas = document.getElementById("canvasMenu");
             ctx = canvas.getContext("2d");
@@ -28,53 +23,53 @@
                 canvas.setAttribute("width", largura);
                 canvas.setAttribute("height", altura);
                 var img = new Image();
-                img.src = "images/wallpaper.png";
+                img.src = "images/index/wallpaper.png";
                 ctx.drawImage(img, 0, 0);
             }
 
             function desenharBaseMenu() {
                 ctx.fillStyle = "rgba(255,255,255,0.7)";
-                var x = parseInt((largura / 2) - (larguraMenu / 2));
-                var y = parseInt((altura / 2) - (alturaMenu / 2));
+                var x = parseInt((largura / divisor) - (larguraMenu / divisor));
+                var y = parseInt((altura / divisor) - (alturaMenu / divisor));
                 ctx.fillRect(x, y, larguraMenu, alturaMenu);
             }
 
             function desenharItensMenu() {
-                var x = parseInt((largura / 2) - (larguraMenu / 2));
-                var y = parseInt((altura / 2) - (alturaMenu / 2));
+                var x = parseInt((largura / divisor) - (larguraMenu / divisor));
+                var y = parseInt((altura / divisor) - (alturaMenu / divisor));
                 var img;
 
                 img = new Image();
-                img.src = "iniciar_1.png";
+                img.src = "images/index/iniciar_1.png";
                 ctx.drawImage(img, x, y);
 
                 img = new Image();
-                img.src = "opcoes_1.png";
+                img.src = "images/index/ranking_1.png";
                 ctx.drawImage(img, x, y + 100);
 
                 img = new Image();
-                img.src = "sair_1.png";
+                img.src = "images/index/loja_1.png";
                 ctx.drawImage(img, x, y + 200);
             }
 
             function selecionarItem(indice) {
                 desenharMenu();
-                var x = parseInt((largura / 2) - (larguraMenu / 2));
-                var y = parseInt((altura / 2) - (alturaMenu / 2));
+                var x = parseInt((largura / divisor) - (larguraMenu / divisor));
+                var y = parseInt((altura / divisor) - (alturaMenu / divisor));
                 var img;
                 img = new Image();
                 switch (indice) {
                     case 0:                        
-                        img.src = "iniciar_2.png";
+                        img.src = "images/index/iniciar_2.png";
                         ctx.drawImage(img, x, y);
                         break;
                     case 1:
-                        img.src = "opcoes_2.png";
+                        img.src = "images/index/ranking_2.png";
                         ctx.drawImage(img, x, y+ 100);
                         break;
                     case 2:
-                        img.src = "sair_2.png";
-                        ctx.drawImage(img, x, y + 200);
+                        img.src = "images/index/loja_2.png";
+                        ctx.drawImage(img, x-2, y + 181);
                         break;
                 }
             }
@@ -92,8 +87,8 @@
             window.onmousemove = function () {
                 var posX = event.clientX;
                 var posY = event.clientY;
-                var x = parseInt((largura / 2) - (larguraMenu / 2));
-                var y = parseInt((altura / 2) - (alturaMenu / 2));
+                var x = parseInt((largura / divisor) - (larguraMenu / divisor));
+                var y = parseInt((altura / divisor) - (alturaMenu / divisor));
                 var indice = -1;
 
                 if (posX > x && posX < x + larguraMenu) {
@@ -103,6 +98,40 @@
                 }
 
                 selecionarItem(indice);
+            }
+            
+            //seguindo a mesma lógica do evento onmousemove e da função selecionarItem
+
+            function clicarItem(indice) {
+                desenharMenu();
+                var x = parseInt((largura / divisor) - (larguraMenu / divisor));
+                var y = parseInt((altura / divisor) - (alturaMenu / divisor));
+                var img;
+                img = new Image();
+                switch (indice) {
+                    case 0:                        
+                        window.location.href = "http://www.devmedia.com.br";
+                    case 1:
+                        window.location.href = "http://www.devmedia.com.br";
+                    case 2:
+                        window.location.href = "loja.html";
+                }
+            }
+
+            window.onclick = function () {
+                var posX = event.clientX;
+                var posY = event.clientY;
+                var x = parseInt((largura / divisor) - (larguraMenu / divisor));
+                var y = parseInt((altura / divisor) - (alturaMenu / divisor));
+                var indice = -1;
+
+                if (posX > x && posX < x + larguraMenu) {
+                    if (posY > y && posY < y + alturaMenu) {
+                        indice = parseInt((posY - y) / 100);                        
+                    }
+                }
+
+                clicarItem(indice);
             }
 
             desenharMenu();
