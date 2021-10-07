@@ -21,16 +21,11 @@
     <form action="adicionarNome.php">
         <input class="campoNome" type="text" maxlength="15" id="nome" name="nome"><br><br>
         <input type="submit" value="Confirmar">
-        <input type="button" onclick="javascript:window.location='index.html';" value="Cancelar">
+        <input type="button" onclick="javascript:window.location='../index.html';" value="Cancelar">
     </form>
 
     <! Cravei o script aqui mas tem que criar um arquivo separado >
-     <script>
-        var pontos = document.querySelector('#pontos')
-        const urlParams = new URLSearchParams(window.location.search);
-        const myParam = urlParams.get('pontos');
-       pontos.textContent = `${myParam}`;    
-     </script>
+     <script src='adicionarNomeRanking.js'></script>
 
 
 </body>
