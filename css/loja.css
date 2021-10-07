@@ -1,12 +1,17 @@
 @font-face {
-  font-family: StardewValley;
-  src: url('../fonts/Stardew_Valley.ttf')format('opentype');
-  src: url('../fonts/Stardew_Valley.otf')format('embedded-opentype');
+	font-family: "Stardew_Valley_Titulo";
+	src: local(Stardew_Valley),url(../fonts/Stardew_Valley.otf);
+}
+
+@font-face {
+	font-family: "Stardew_Valley";
+	src: local(Stardew_Valley),url(../fonts/Stardew_Valley.ttf);
+
 }
 
 * {
   box-sizing: border-box;
-  font-family: StardewValley;
+  font-family: Stardew_Valley;
 }
 
 html,body {
@@ -81,7 +86,7 @@ html,body {
   color: rgba(255,255,255,1);
   position: relative;
   top: 20px;
-  font-family: StardewValley;
+  font-family: Stardew_Valley;
   font-size: 30px;
   opacity: 1;
   text-align: center;
@@ -94,7 +99,7 @@ html,body {
 }
 .moedas-span{
   color: rgba(255,255,255,1);
-  font-family: StardewValley;
+  font-family: Stardew_Valley;
   font-size: 30px;
   opacity: 1;
   text-align: center;
@@ -168,10 +173,10 @@ html,body {
   position: relative;
   top: 0px;
   left: 0px;
-  font-family: StardewValley;
+  font-family: Stardew_Valley;
   opacity: 1;
   text-align: center;
-  font-size: 25px;
+  font-size: 30px;
 }
 .descricao {
   
@@ -179,10 +184,10 @@ html,body {
   position: relative;
   top: 0px;
   left: 0px;
-  font-family: StardewValley;
+  font-family: Stardew_Valley;
   opacity: 1;
   text-align: center;
-  font-size: 15px;
+  font-size: 20px;
 }
 .valor {
   height: 83px;
@@ -195,7 +200,7 @@ html,body {
 }
 .descricao-valor { 
   color: rgba(255,255,255,1);
-  font-family: StardewValley;
+  font-family: Stardew_Valley;
   font-size: 40px;
   opacity: 1;
 }
@@ -281,7 +286,7 @@ html,body {
 }
 .span-mochila {    
   color: rgba(255,255,255,1);
-  font-family: StardewValley;
+  font-family: Stardew_Valley;
   font-size: 25px;
   opacity: 1;
   text-align: center;
@@ -324,7 +329,7 @@ html,body {
 .a-sair {
   height: 50px;
   color: rgba(255,255,255,1);
-  font-family: StardewValley;
+  font-family: Stardew_Valley;
   opacity: 1;
   font-size: 25px;
   text-decoration: none;
