@@ -1,26 +1,40 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+@font-face {
+	font-family: "Stardew_Valley_Titulo";
+	src: local(Stardew_Valley),url(../fonts/Stardew_Valley.otf);
 }
 
-body {
-    height: 100vh;
-    display: flex;
+@font-face {
+	font-family: "Stardew_Valley";
+	src: local(Stardew_Valley),url(../fonts/Stardew_Valley.ttf);
+
+}
+* {
+    box-sizing: border-box;
+    font-family: Stardew_Valley;
+  }
+  
+html,body {
+    width: 100%;
+    height: 100%;
+    padding:0;
+    margin:0;
+}
+
+.bg {
     background-image: url(wallpaper2.png);
-    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
 }
 
 .memory-game {
-    position: relative;
-    bottom: 100px;
-    right: 50px;
-    width: 640px;
-    height: 640px;
-    margin: auto;
     display: flex;
     flex-wrap: wrap;
-    perspective: 1000px;
+    position: relative;
+    left: 40px;
+    height: 100vh;
+    width: 100vh;
 }
 
 .memory-card {
@@ -58,12 +72,60 @@ body {
 
 .infos {
     position: relative;
-    top: 100px;
-    display: inline-block;
-    text-align: right;
-    width: 350px;
-    padding: 0;
-    color: #EF9611;
-    font-size: 40px;
-    margin-left: 650px;
+    top: -100vh;
+    display: flex;
+    color: #ffffff;
+    font-size: 38px;
+    background: rgba(185,154,73,0.7200000286102295);
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    float: right;
+    width: 25%;
+}
+
+
+.junimo {    
+    width: 60px;
+    height: 60px;
+    background: url(../images/loja/mochila-junimo-image.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+  
+  }
+.gato {    
+  width: 52px;
+  height: 80px;
+  background: url(../images/loja/mochila-gato-image.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+}
+.orpimento {
+  width: 80px;
+  height: 80px;
+  background: url(../images/loja/mochila-orpimento-image.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.valor-junimo{
+    position: relative;
+    right: 25px;
+    top: 15px;
+}
+
+.valor-gato{
+    position: relative;
+    right: 25px;
+    top: 15px;
+}
+.valor-orpimento{
+    position: relative;
+    right: 20px;
+    top: 15px;
 }

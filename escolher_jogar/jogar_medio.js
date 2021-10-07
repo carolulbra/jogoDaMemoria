@@ -70,11 +70,10 @@ function atualizamoedas() {
     moedas.textContent = `${totalmoedas}`;
 
     var valorMoeda = localStorage.getItem('mochila');
-    valorMoeda = valorMoeda + totalmoedas;
+    valorMoeda = parseInt(valorMoeda) + 1;
     var valorStorage = String(valorMoeda);
     localStorage.setItem('mochila', valorStorage);
 }
-
 
 function disableCards() {
     firstCard.removeEventListener('click', flipCard);
@@ -145,3 +144,53 @@ function finalizarJogo(flag) {
 
 
 cards.forEach(card => card.addEventListener('click', flipCard));
+
+
+//a partir daqui: resolução dos boosters
+
+$(".valor-orpimento").html(localStorage.getItem("Orpimento"));
+$(".valor-gato").html(localStorage.getItem("Gato"));
+$(".valor-junimo").html(localStorage.getItem("Junimo Roxo"));
+
+$('.orpimento').click(function(){
+    if(localStorage.getItem('Orpimento')>0){
+        //dobra a quantidade de pontos por par por 10 segundos
+
+        var valor = localStorage.getItem('Orpimento');
+        valor = parseInt(valor) - 1;
+        var valorStorage = String(valor);
+        localStorage.setItem('Orpimento', valorStorage);
+        
+        $(".valor-orpimento").html(localStorage.getItem("Orpimento"));
+
+    }else alert("Você não tem este booster. Compre na loja para utilizá-lo!");
+});
+
+$('.gato').click(function(){
+    if(localStorage.getItem('Gato')>0){
+        //mostra 2 pares
+
+        var valor = localStorage.getItem('Gato');
+        valor = parseInt(valor) - 1;
+        var valorStorage = String(valor);
+        localStorage.setItem('Gato', valorStorage);
+        
+        $(".valor-gato").html(localStorage.getItem("Gato"));
+
+    }else alert("Você não tem este booster. Compre na loja para utilizá-lo!");
+});
+
+$('.junimo').click(function(){
+    if(localStorage.getItem('Junimo Roxo')>0){
+        //aumenta 5 segundos no tempo
+        seg = seg + 5;
+        
+        var valor = localStorage.getItem('Junimo Roxo');
+        valor = parseInt(valor) - 1;
+        var valorStorage = String(valor);
+        localStorage.setItem('Junimo Roxo', valorStorage);
+
+        $(".valor-junimo").html(localStorage.getItem("Junimo Roxo"));
+
+    }else alert("Você não tem este booster. Compre na loja para utilizá-lo!");
+});
