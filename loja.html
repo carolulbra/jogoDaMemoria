@@ -9,10 +9,17 @@
     <script>
         $(document).ready(function(){
             
-            if(!localStorage.getItem("Orpimento")) localStorage.setItem("Orpimento",'0');
-            if(!localStorage.getItem("Gato")) localStorage.setItem("Gato",'0');
-            if(!localStorage.getItem("Junimo Roxo")) localStorage.setItem("Junimo Roxo",'0');
-            if(!localStorage.getItem('mochila')) localStorage.setItem('mochila','0');
+            if(!localStorage.getItem("Orpimento")) 
+                localStorage.setItem("Orpimento",'0');
+
+            if(!localStorage.getItem("Gato")) 
+                localStorage.setItem("Gato",'0');
+
+            if(!localStorage.getItem("Junimo Roxo")) 
+                localStorage.setItem("Junimo Roxo",'0');
+
+            if(!localStorage.getItem('mochila')) 
+                localStorage.setItem('mochila','0');
 
             atualizaValorHtml();
 
@@ -44,7 +51,8 @@
 
                     var resultado = confirm("Deseja comprar o item: " + itemSelecionado + "?");
 
-                    if (resultado == true) atualizaStorage(itemSelecionado, descricaoValor);
+                    if(resultado == true) 
+                        atualizaStorage(itemSelecionado, descricaoValor);
 
                 }else alert("Não há moedas suficientes para comprar este item.");
             };

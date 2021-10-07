@@ -1,12 +1,12 @@
 
 @font-face {
 	font-family: "Stardew_Valley_Titulo";
-	src: local(Stardew_Valle),url(./fonts/Stardew_Valley.otf);
+	src: local(Stardew_Valley),url(../fonts/Stardew_Valley.otf);
 }
 
 @font-face {
 	font-family: "Stardew_Valley";
-	src: local(Stardew_Valle),url(./fonts/Stardew_Valley.ttf);
+	src: local(Stardew_Valley),url(../fonts/Stardew_Valley.ttf);
 
 }
 

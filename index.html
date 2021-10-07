@@ -8,6 +8,30 @@
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script>
         $(document).ready(function() {
+            
+
+            if(!localStorage.getItem("admin")) 
+                localStorage.setItem("admin", '0');
+
+            function tecla(){
+                var admin = event.keyCode;
+                var adminStorage = localStorage.getItem("admin") + String(admin);
+                localStorage.setItem("admin", adminStorage);
+            }
+            document.body.onkeypress = tecla;
+            
+            var valor = 097100109105110;
+            if(localStorage.getItem("admin") == valor){
+                    window.location.href = "admin/telaAdmin.html";
+                    localStorage.removeItem("admin");
+            };
+            /*admin
+            97 = a
+            100 = d
+            109 = m
+            105 = i
+            110 = n
+            */
             var largura;
             var altura;
             var larguraMenu = 400;
