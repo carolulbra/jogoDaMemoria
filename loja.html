@@ -7,26 +7,31 @@
     <link href="./css/loja.css" rel="stylesheet" />
     <script>
         $(document).ready(function(){
-            
+
+            $("#valor-orpimento").html(localStorage.getItem("Orpimento"));
 
             $('.image').click(function(){
-
-                $.getJSON( "db.json", function(data) {
-                    $.each(result, function(i, field){
-                        var item = append(field + " ");
-                        alert(item);
-                    });
-                });
-                var valor = 1;
+                if(!localStorage.setItem('mochila')){
+                    localStorage.setItem('mochila',0);
+                };
                 var itemSelecionado = $('#item').html();
                 var resultado = confirm("Deseja comprar o item: " + itemSelecionado + " ?");
-                if (resultado == true) {
-                    valor++;
-                    alert("O item " + itemSelecionado + " foi comprado com sucesso!");    
-                }
-                $("#valor").html(valor);
-
+                if(!localStorage.getItem(itemSelecionado)){
+                    localStorage.setItem(itemSelecionado,0);
+                };
+                if (resultado == true){
+                    atualizaStorage(itemSelecionado);
+                };
+                alert("O item " + itemSelecionado + " foi comprado com sucesso!");
             });
+
+            function atualizaStorage(itemSelecionado){
+                var valor = localStorage.getItem(itemSelecionado);
+                valor = parseInt(valor) + 1;
+                var valorStorage = String(valor);
+                localStorage.setItem(itemSelecionado,valorStorage);   
+                $("#valor").html(valor);
+            };
         });
     </script>
 </head>
@@ -116,7 +121,7 @@
                             </div>
                                 <div class="qtd-mochila">
                                     <span class="span-mochila">x</span>
-                                    <span class="span-mochila" id="valor"></span>
+                                    <span class="span-mochila" id="valor-orpimento"></span>
                             </div>
                         </div>
                     </div>
