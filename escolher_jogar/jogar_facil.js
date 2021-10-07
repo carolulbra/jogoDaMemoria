@@ -62,9 +62,17 @@ function pontuacao() {
     pontos.textContent = `${iniciopontuacao}`;
 }
 
+if(!localStorage.getItem('mochila')) 
+        localStorage.setItem('mochila','0');
+
 function atualizamoedas() {
     totalmoedas = totalmoedas+1;
     moedas.textContent = `${totalmoedas}`;
+
+    var valorMoeda = localStorage.getItem('mochila');
+    valorMoeda = valorMoeda + totalmoedas;
+    var valorStorage = String(valorMoeda);
+    localStorage.setItem('mochila', valorStorage);
 }
 
 function disableCards() {
