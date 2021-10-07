@@ -19,6 +19,8 @@ let moedas = document.querySelector('#moedas')
 
 let numeroJogadas = 0;
 
+let boosterOrpimento = 0;//ADICIONADO
+let countTime = 0;//ADICIONADO
 
 function flipCard() {
     if (lockBoard) return;
@@ -59,7 +61,10 @@ function checkForMatch() {
 
 
 function pontuacao() {
-    iniciopontuacao = iniciopontuacao + 5;
+    if(boosterOrpimento != 1){//ADICIONADO
+        iniciopontuacao = iniciopontuacao + 5;
+    }
+    else{iniciopontuacao = iniciopontuacao + 10}
     pontos.textContent = `${iniciopontuacao}`;
 }
 
@@ -135,6 +140,9 @@ currentTimer = setInterval(() => {
         finalizarJogo(flag = 1);
     timer.textContent = `${seg}`;
     seg--;
+    if(boosterOrpimento == 1 && countTime <10){//ADICIONADO
+        countTime = countTime +1 ;
+    }else{ boosterOrpimento = 0;}   
 }, 1000);
 
 function finalizarJogo(flag) {
@@ -156,7 +164,7 @@ $(".valor-junimo").html(localStorage.getItem("Junimo Roxo"));
 $('.orpimento').click(function(){
     if(localStorage.getItem('Orpimento')>0){
         //dobra a quantidade de pontos por par por 10 segundos
-
+        boosterOrpimento = 1; //ADICIONADO
         var valor = localStorage.getItem('Orpimento');
         valor = parseInt(valor) - 1;
         var valorStorage = String(valor);
