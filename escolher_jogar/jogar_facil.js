@@ -22,6 +22,9 @@ let numeroJogadas = 0;
 let boosterOrpimento = 0;//ADICIONADO
 let countTime = 0;//ADICIONADO
 
+let positionCard = [];
+let contador = 0;//ADICIONADO
+
 function flipCard() {
     if (lockBoard) return;
     if (this === firstCard) return;
@@ -101,12 +104,7 @@ function reset() {
         [hasFlippedCard, lockBoard] = [false, false];
         cards.forEach(card => [card] = [null]);
         cards.forEach(card => card.addEventListener('click', flipCard));
-        (function shuffle() {
-            cards.forEach((card) => {
-                let randomPosition = Math.floor(Math.random() * 12);
-                card.style.order = randomPosition;
-            })
-        })();
+        shuffle();
     }, 800);
 }
 
@@ -127,12 +125,14 @@ function resetBoard() {
     [firstCard, secondCard] = [null, null];
 }
 
-(function shuffle() {
+function shuffle() {
+    contador = 0;
     cards.forEach(card => {
         let randomPos = Math.floor(Math.random() * 4);
         card.style.order = randomPos;
+        positionCard[randomPos] = card.style.order;
     });
-})();
+};
 
 
 currentTimer = setInterval(() => {
@@ -153,6 +153,13 @@ function finalizarJogo(flag) {
 
 
 cards.forEach(card => card.addEventListener('click', flipCard));
+
+function boosterViraDuasCartas() {
+    document.getElementById("feiticeiro").click();
+    document.getElementById("feiticeiro1").click();
+    document.getElementById("krobus").click();
+    document.getElementById("krobus1").click();
+}
 
 
 //a partir daqui: resolução dos boosters
@@ -178,7 +185,7 @@ $('.orpimento').click(function(){
 $('.gato').click(function(){
     if(localStorage.getItem('Gato')>0){
         //mostra 2 pares
-
+        boosterViraDuasCartas();
         var valor = localStorage.getItem('Gato');
         valor = parseInt(valor) - 1;
         var valorStorage = String(valor);
