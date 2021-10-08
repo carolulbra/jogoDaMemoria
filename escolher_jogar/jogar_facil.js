@@ -165,6 +165,7 @@ $('.orpimento').click(function(){
     if(localStorage.getItem('Orpimento')>0){
         //dobra a quantidade de pontos por par por 10 segundos
         boosterOrpimento = 1; //ADICIONADO
+        
         var valor = localStorage.getItem('Orpimento');
         valor = parseInt(valor) - 1;
         var valorStorage = String(valor);
