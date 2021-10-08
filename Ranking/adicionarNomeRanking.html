@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adicionar Nome ao Ranking</title>
     <link rel="stylesheet" href="acessarRanking.css">
-    <link rel="stylesheet" href="jogar_facil.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
 </head>
 
 <body>
@@ -18,16 +19,22 @@
         <h1>Adicionar nome ao Ranking:</h1>
     </header>
 
-    <form action="adicionarNome.php">
-        <input class="campoNome" type="text" maxlength="15" id="nome" name="nome"><br><br>
-        <input type="submit" value="Confirmar">
+    <form action=adicionarNomeRanking.js>
+        <input class="campoNome" type="text" maxlength="15" id="nomes" name="nomes" autocomplete="off"><br><br>
+        <input type="button" id="confirmar" value="Confirmar">
         <input type="button" onclick="javascript:window.location='../index.html';" value="Cancelar">
-    </form>
-</div>
-    <! Cravei o script aqui mas tem que criar um arquivo separado >
-     <script src='adicionarNomeRanking.js'></script>
+
+        <!--<form action="adicionarNome.php">
+            <input class="campoNome" type="text" maxlength="15" id="nome" name="nome"><br><br>
+            <input type="submit" value="Confirmar">
+            <input type="button" onclick="javascript:window.location='../index.html';" value="Cancelar">
+        -->
+    </div>
+         <script src='adicionarNomeRanking.js'></script>
 
 
+    <!--<div id="result">-->
+    </div>
 </body>
 
 </html>
