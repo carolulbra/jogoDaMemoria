@@ -19,6 +19,9 @@ let moedas = document.querySelector('#moedas')
 
 let numeroJogadas = 0;
 
+let boosterOrpimento = 0;
+let countTime = 0;
+
 
 function flipCard() {
     if (lockBoard) return;
@@ -58,8 +61,13 @@ function checkForMatch() {
 }
 
 function pontuacao() {
-    iniciopontuacao = iniciopontuacao + 10;
+    pontoslevel = 10
+    if(boosterOrpimento != 1){
+        iniciopontuacao = iniciopontuacao + pontoslevel;
+    }
+    else{iniciopontuacao = iniciopontuacao + (pontoslevel*2)}
     pontos.textContent = `${iniciopontuacao}`;
+    
 }
 
 if(!localStorage.getItem('mochila')) 
@@ -145,6 +153,22 @@ function finalizarJogo(flag) {
 
 cards.forEach(card => card.addEventListener('click', flipCard));
 
+function boosterViraDuasCartas() {
+    var cartas = document.getElementsByClassName("memory-card");
+    var aux = cartas;
+    var cartasviradas = 0;
+    for (countcartas = 0; countcartas < cartas.length; countcartas++) {
+         if (cartas[countcartas].className != "memory-card flip" )
+          for (countaux = 0; countaux < aux.length && cartasviradas <3; countaux++) {
+             if (aux[countaux].className != "memory-card flip" && countaux != countcartas ){
+                    cartas[countcartas].click()
+                    aux[countaux].click()
+                    cartasviradas ++;
+             }
+                
+         }
+     }
+ }
 
 //a partir daqui: resolução dos boosters
 
@@ -155,7 +179,7 @@ $(".valor-junimo").html(localStorage.getItem("Junimo Roxo"));
 $('.orpimento').click(function(){
     if(localStorage.getItem('Orpimento')>0){
         //dobra a quantidade de pontos por par por 10 segundos
-
+        boosterOrpimento = 1;
         var valor = localStorage.getItem('Orpimento');
         valor = parseInt(valor) - 1;
         var valorStorage = String(valor);
@@ -169,7 +193,7 @@ $('.orpimento').click(function(){
 $('.gato').click(function(){
     if(localStorage.getItem('Gato')>0){
         //mostra 2 pares
-
+        boosterViraDuasCartas();
         var valor = localStorage.getItem('Gato');
         valor = parseInt(valor) - 1;
         var valorStorage = String(valor);

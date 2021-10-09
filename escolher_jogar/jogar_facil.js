@@ -19,11 +19,8 @@ let moedas = document.querySelector('#moedas')
 
 let numeroJogadas = 0;
 
-let boosterOrpimento = 0;//ADICIONADO
-let countTime = 0;//ADICIONADO
-
-let positionCard = [];
-let contador = 0;//ADICIONADO
+let boosterOrpimento = 0;
+let countTime = 0;
 
 function flipCard() {
     if (lockBoard) return;
@@ -64,10 +61,11 @@ function checkForMatch() {
 
 
 function pontuacao() {
-    if(boosterOrpimento != 1){//ADICIONADO
-        iniciopontuacao = iniciopontuacao + 5;
+    pontoslevel = 5
+    if(boosterOrpimento != 1){
+        iniciopontuacao = iniciopontuacao + pontoslevel;
     }
-    else{iniciopontuacao = iniciopontuacao + 10}
+    else{iniciopontuacao = iniciopontuacao + (pontoslevel*2)}
     pontos.textContent = `${iniciopontuacao}`;
 }
 
@@ -155,11 +153,21 @@ function finalizarJogo(flag) {
 cards.forEach(card => card.addEventListener('click', flipCard));
 
 function boosterViraDuasCartas() {
-    document.getElementById("feiticeiro").click();
-    document.getElementById("feiticeiro1").click();
-    document.getElementById("krobus").click();
-    document.getElementById("krobus1").click();
-}
+    var cartas = document.getElementsByClassName("memory-card");
+    var aux = cartas;
+    var cartasviradas = 0;
+    for (countcartas = 0; countcartas < cartas.length; countcartas++) {
+         if (cartas[countcartas].className != "memory-card flip" )
+          for (countaux = 0; countaux < aux.length && cartasviradas <3; countaux++) {
+             if (aux[countaux].className != "memory-card flip" && countaux != countcartas ){
+                    cartas[countcartas].click()
+                    aux[countaux].click()
+                    cartasviradas ++;
+             }
+                
+         }
+     }
+ }
 
 
 //a partir daqui: resolução dos boosters
