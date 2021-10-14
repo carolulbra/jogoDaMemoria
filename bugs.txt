@@ -1,0 +1,6 @@
+-- exemplo modo fácil
+    -- Usou muitos boosters de tempo, ficou com 50 segundos, acabou a partido tempo volta para 20 segundos.
+    -- booster de dobras pontos por 10 segundo funciona só a primeria vez.
+    -- acabou a partida as cartas quando estão virando pode se ver qual carta está em determinada posição.
+
+    
