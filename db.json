@@ -1,0 +1,27 @@
+[   
+    {
+        "id": "0",
+        "nome": "este db.json não funciona, mas pode funcionar futuramente com AJAX, por enquanto usamos localStorage como banco de dados",
+        "valor": 0
+    },
+    {
+        "id": "1",
+        "nome": "orpimento",
+        "valor": 0
+    },
+    {
+        "id": "2",
+        "nome": "gato",
+        "valor": 0
+    },
+    {
+        "id": "3",
+        "nome": "junimo",
+        "valor": 0
+    },
+    {
+        "id": "4",
+        "nome": "moedas",
+        "valor": 0
+    }
+]
