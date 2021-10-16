@@ -22,6 +22,10 @@ let numeroJogadas = 0;
 let boosterOrpimento = 0;
 let countTime = 0;
 
+
+
+
+
 function flipCard() {
     if (lockBoard) return;
     if (this === firstCard) return;
@@ -218,4 +222,21 @@ $('.junimo').click(function(){
         $(".valor-junimo").html(localStorage.getItem("Junimo Roxo"));
 
     }else alert("Você não tem este booster. Compre na loja para utilizá-lo!");
+});
+
+
+$(document).ready(function () {
+
+    atualizaValorHtml();
+
+    function atualizaValorHtml() {
+        // $(".imagemCarta1").html(localStorage.getItem("imagemCarta1"));
+        $('#imagemCarta1-0').attr('src', localStorage.getItem("imagemCarta1"));
+        $('#imagemCarta1-1').attr('src', localStorage.getItem("imagemCarta1"));
+        //  $(".imagemCarta2").html(localStorage.getItem("imagemCarta2"));
+        $('#imagemCarta2-0').attr('src', localStorage.getItem("imagemCarta2"));
+        $('#imagemCarta2-1').attr('src', localStorage.getItem("imagemCarta2"));
+
+    };
+
 });
