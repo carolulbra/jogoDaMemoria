@@ -71,34 +71,12 @@ h1 {
     align-content: center;
 }
 
-#listaNomes1{
-    padding: 10px 10px;
-}
-
-#listaNomes2{
-    padding: 10px 10px;
-}
-
-#listaNomes3{
-    padding: 10px 10px;
-}
-
-#listaNomes4{
-    padding: 10px 10px;
-}
-
-#listaNomes5{
-    padding: 10px 10px;
-}
-
 input{
     font-family: Stardew;
     color: #EF9611;
     background:  transparent;
     border:  none;
     font-size: 50px;
-    padding-left: 120px;
-    padding-right: 100px;
     cursor: pointer;
 }
 
@@ -111,7 +89,6 @@ table {
 
 th {
     font-family: Stardew, sans-serif;
-    padding: 30px 20px;
     font-size: 30px;
     color: #EF9611;
 }
