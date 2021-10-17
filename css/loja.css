@@ -12,6 +12,8 @@
 * {
   box-sizing: border-box;
   font-family: Stardew_Valley;
+  
+  text-shadow: 3px 3px black;
 }
 
 html,body {
