@@ -71,20 +71,6 @@ h1 {
     font-style: normal;
     font-weight: bold;
     padding: 10px 10px;
-}
-
-ol li {
-  list-style-type: none;
-  counter-increment: step-counter;
-}
-
-ol li:before {
-  content: counter(step-counter) " - ";
-}
-
-li:nth-of-type(1n+6) {
-    display: none;
-}
 
 input{
     font-family: Stardew;
@@ -92,8 +78,6 @@ input{
     background:  transparent;
     border:  none;
     font-size: 50px;
-    padding-left: 120px;
-    padding-right: 100px;
     cursor: pointer;
 }
 
@@ -106,7 +90,6 @@ table {
 
 th {
     font-family: Stardew, sans-serif;
-    padding: 30px 20px;
     font-size: 30px;
     color: #EF9611;
 }

@@ -1,3 +1,23 @@
+var listcards = ['abigail.png',"Anao.png",'caroline.png','Demetrius.png','feiticeiro.png','Gunther.png','Jodi.png','Knet.png','krobus.png','Linus.png','Marlon.png','Maru.png','Morris.png','pierre.png','robin.png','Sam.png','Sebastian.png','Sr.Qi.png'];
+
+
+for ( let i = 1, len = listcards.length; i <= len; i++ ) {
+    atualizaValorHtml(i);
+}
+
+    function atualizaValorHtml(i) {
+        // $(".imagemCarta1").html(localStorage.getItem("imagemCarta1"));
+        $('#imagemCarta'+i+'-0').attr('src', localStorage.getItem("imagemCarta"+i));
+        $('#imagemCarta'+i+'-1').attr('src', localStorage.getItem("imagemCarta"+i));
+    };
+
+
+
+
+
+//continuação jogo
+
+
 const cards = document.querySelectorAll('.memory-card');
 
 
@@ -21,6 +41,10 @@ let numeroJogadas = 0;
 
 let boosterOrpimento = 0;
 let countTime = 0;
+
+
+
+
 
 function flipCard() {
     if (lockBoard) return;
@@ -219,3 +243,25 @@ $('.junimo').click(function(){
 
     }else alert("Você não tem este booster. Compre na loja para utilizá-lo!");
 });
+
+
+/*var listcards = ['abigail.png',"Anao.png",'caroline.png','Demetrius.png','feiticeiro.png','Gunther.png','Jodi.png','Knet.png','krobus.png','Linus.png','Marlon.png','Maru.png','Morris.png','pierre.png','robin.png','Sam.png','Sebastian.png','Sr.Qi.png']
+
+//localStorage.clear() // sempre que começar uma nova partida vai redefinir as cartas novamente
+for ( let i = 1, len = listcards.length; i <= len; i++ ) {
+    if (!localStorage.getItem("imagemCarta"+i))
+        position = Math.floor(Math.random() * listcards.length);
+        localStorage.setItem("imagemCarta"+i, listcards[position] );
+        listcards.splice(position,1);// remove carta da lista para não repetir
+  }
+    atualizaValorHtml();
+
+    function atualizaValorHtml() {
+        // $(".imagemCarta1").html(localStorage.getItem("imagemCarta1"));
+        $('#imagemCarta1-0').attr('src', localStorage.getItem("imagemCarta1"));
+        $('#imagemCarta1-1').attr('src', localStorage.getItem("imagemCarta1"));
+        //  $(".imagemCarta2").html(localStorage.getItem("imagemCarta2"));
+        $('#imagemCarta2-0').attr('src', localStorage.getItem("imagemCarta2"));
+        $('#imagemCarta2-1').attr('src', localStorage.getItem("imagemCarta2"));
+
+    };*/

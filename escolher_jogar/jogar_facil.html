@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
     <title>Memory Game</title>
 
     <link rel="stylesheet" href="jogar_facil.css">
@@ -12,20 +13,20 @@
 <body>
     <div class="bg">
         <section class="memory-game">
-            <div class="memory-card" data-framework="feiticeiro">
-                <img class="front-face" src="feiticeiro.png" id="feiticeiro" />
+            <div class="memory-card" data-framework="imagemCarta1">
+                <img class="front-face" id="imagemCarta1-0"  />
                 <img class="back-face" src="backface.png" alt="SV" />
             </div>
-            <div class="memory-card" data-framework="feiticeiro">
-                <img class="front-face" src="feiticeiro.png" id="feiticeiro" />
+            <div class="memory-card" data-framework="imagemCarta1">
+                <img class="front-face" id="imagemCarta1-1"  />
                 <img class="back-face" src="backface.png" alt="SV" />
             </div>
-            <div class="memory-card" data-framework="krobus">
-                <img class="front-face" src="krobus.png" id="krobus" />
+            <div class="memory-card" data-framework="imagemCarta2">
+                <img class="front-face" id="imagemCarta2-0"  />
                 <img class="back-face" src="backface.png" alt="SV" />
             </div>
-            <div class="memory-card" data-framework="krobus">
-                <img class="front-face" src="krobus.png" id="krobus" />
+            <div class="memory-card" data-framework="imagemCarta2">
+                <img class="front-face" id="imagemCarta2-1"  />
                 <img class="back-face" src="backface.png" alt="SV" />
             </div>
         </section>
@@ -52,7 +53,7 @@
                     <span class="valor-junimo"></span>
                 </div>
         </div>
-        <input name="time" id="time" value="10" hidden>
+        <input name="time" id="time" value="20" hidden>
         <! tempo cronometro >
     </div>
     <script src="jogar_facil.js"></script>
