@@ -218,3 +218,41 @@ $('.junimo').click(function(){
 
     }else alert("Você não tem este booster. Compre na loja para utilizá-lo!");
 });
+
+$(document).ready(function () {
+
+    atualizaValorHtml();
+
+    function atualizaValorHtml() {
+    
+        $('#imagemCarta1-0').attr('src', localStorage.getItem("imagemCarta1"));
+        $('#imagemCarta1-1').attr('src', localStorage.getItem("imagemCarta1"));
+ 
+        $('#imagemCarta2-0').attr('src', localStorage.getItem("imagemCarta2"));
+        $('#imagemCarta2-1').attr('src', localStorage.getItem("imagemCarta2"));
+
+        
+        $('#imagemCarta3-0').attr('src', localStorage.getItem("imagemCarta3"));
+        $('#imagemCarta3-1').attr('src', localStorage.getItem("imagemCarta3"));
+ 
+        $('#imagemCarta4-0').attr('src', localStorage.getItem("imagemCarta4"));
+        $('#imagemCarta4-1').attr('src', localStorage.getItem("imagemCarta4"));
+
+        
+        $('#imagemCarta5-0').attr('src', localStorage.getItem("imagemCarta5"));
+        $('#imagemCarta5-1').attr('src', localStorage.getItem("imagemCarta5"));
+ 
+        $('#imagemCarta6-0').attr('src', localStorage.getItem("imagemCarta6"));
+        $('#imagemCarta6-1').attr('src', localStorage.getItem("imagemCarta6"));
+
+        
+        $('#imagemCarta7-0').attr('src', localStorage.getItem("imagemCarta7"));
+        $('#imagemCarta7-1').attr('src', localStorage.getItem("imagemCarta7"));
+ 
+        $('#imagemCarta8-0').attr('src', localStorage.getItem("imagemCarta8"));
+        $('#imagemCarta8-1').attr('src', localStorage.getItem("imagemCarta8"));
+
+
+    };
+
+});
