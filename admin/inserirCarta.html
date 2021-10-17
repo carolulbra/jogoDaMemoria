@@ -9,13 +9,14 @@
 <body>
     <main class="memory-game">
         <div id="inserirCarta"> 
-            <p id="t1">Tela Administrador Manter Cartas & Boosters</p>
+            <p id="t1">Tela Administrador Manter Cartas</p>
         </div>
         <div id="manter"> Menu Inserir Cartas
-            <form action="gravar.php" method="POST" enctype="multipart/form-data">
+            <form action="incluirCarta.js" method="POST" enctype="multipart/form-data">
                 <div>
-                    Escolha uma nova carta aqui:
-                    <input id="img-input" type="file" name="imagem">
+                    <br>
+                    <label for="img-input">Clique aqui para escolher carta...</label>
+                    <input type="file" name="imagem" id="img-input" accept="image/png, image/jpeg">
                 </div>
                 <div id="img-container">
                     <script>
@@ -32,13 +33,13 @@
                     </script>
                     <img id="preview" src="">
                 </div>
-                <div>
-                    <input type="submit" value="Enviar">
-                </div>
-                <br> 
-                <div id="desenv">"EM DESENVOLVIMENTO"</div>
+                <div class="input">
+                    <input id="enviar" type="submit" value="Confirmar">
                     <br>
-                    <a href="telaAdmin.html">Voltar Menu
+                    <a href="telaAdmin.html">Voltar Menu</a>
+                </div>
+                
+            <div id="desenv">"EM DESENVOLVIMENTO"</div>
                 </div> 
             </form>
         </div>
