@@ -169,7 +169,7 @@ currentTimer = setInterval(() => {
 
 function finalizarJogo(flag) {
     if (flag === 1)
-        window.location = '../Ranking/adicionarNomeRanking.html?pontos='+iniciopontuacao
+        window.location = '../Ranking/adicionarNomeRanking.html?pontos='+iniciopontuacao+'&dificuldade=f'
     seg = 100000;
 }
 
