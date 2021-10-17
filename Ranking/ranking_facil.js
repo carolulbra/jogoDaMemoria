@@ -1,4 +1,5 @@
 const KEY = 'facil'
+
 const setValue = (value) => localStorage.setItem(KEY, JSON.stringify(value))
 
 const getValue = () => {
