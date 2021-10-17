@@ -12,9 +12,8 @@
             <p id="t1">Tela Administrador Manter Cartas</p>
         </div>
         <div id="manter"> Menu Inserir Cartas
-            <form action="incluirCarta.js" method="POST" enctype="multipart/form-data">
+
                 <div>
-                    <br>
                     <label for="img-input">Clique aqui para escolher carta...</label>
                     <input type="file" name="imagem" id="img-input" accept="image/png, image/jpeg">
                 </div>
@@ -33,8 +32,12 @@
                     </script>
                     <img id="preview" src="">
                 </div>
-                <div class="input">
-                    <input id="enviar" type="submit" value="Confirmar">
+                <div>
+                    <!--<input type="submit" value="Salvar">-->
+                    <button onclick="salvar()">Salvar</button>
+                </div>
+                <br> 
+                <div id="desenv">"EM DESENVOLVIMENTO"</div>
                     <br>
                     <a href="telaAdmin.html">Voltar Menu</a>
                 </div>
@@ -43,6 +46,16 @@
                 </div> 
             </form>
         </div>
+        <script type="file/javascript" src="FileSaver.min.js"></script>
+        <!-- função ao clicar em salvar -->
+        <script>
+            function salvar() {
+                    //function copySync(src, dest) {
+                        var file = new File(["Hello, world!"], "hello world.txt", {type: "text/plain;charset=utf-8"});
+                        FileSaver.saveAs(file);
+                    //}
+            }
+    </script>
     </main>
 </body>
 </html>

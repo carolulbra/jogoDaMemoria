@@ -10,9 +10,7 @@
 </head>
 
 <body>
-    <script type="text/javascript">
-        var nomesRanking = JSON.parse(localStorage.getItem("nomes"))
-    </script>
+    <script src='ranking_facil.js'></script>
 
 <div class=bg>
     <header>
@@ -20,30 +18,14 @@
         <h1>Ranking Facil</h1>
     </header>
 
-    <table id="listaRanking">
+    <ol id="list">
+    </ol>
+    
+    <br>
+    <table>
         <thead>
-            <th class="1" id="listaNomes1"> 1 - 
-            </th>
-        </thead>
-        <thead>
-            <th class="2" id="listaNomes2"> 2 - ---------
-            </th>
-        </thead>
-        <thead>
-            <th class="3" id="listaNomes3"> 3 - ---------
-            </th>
-        </thead>
-        <thead>
-            <th class="4" id="listaNomes4"> 4 - ---------
-            </th>
-        </thead>
-        <thead>
-            <th class="5" id="listaNomes5"> 5 - ---------
-            </th>
-        </thead>
-        <thread>
             <th><a href="acessarRanking.html">Voltar</a></th>
-        </thread>
+        </thead>
     </table>
 </div>
 </body>
