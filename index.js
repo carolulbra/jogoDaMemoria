@@ -161,18 +161,13 @@ $(window).load(function() {
 
     desenharMenu();
     
-    $(document).ready(function () { // inseções das cartas padrões no localstorage
-    
-    var listcards = ['abigail.png',"Anao.png",'caroline.png','Demetrius.png','feiticeiro.png','Gunther.png','Jodi.png','Knet.png','krobus.png','Linus.png',
-    'Marlon.png','Maru.png','Morris.png','pierre.png','robin.png','Sam.png','Sebastian.png','Sr.Qi.png']
+    var listcards = ['abigail.png',"Anao.png",'caroline.png','Demetrius.png','feiticeiro.png','Gunther.png','Jodi.png','Knet.png','krobus.png','Linus.png','Marlon.png','Maru.png','Morris.png','pierre.png','robin.png','Sam.png','Sebastian.png','Sr.Qi.png'];
 
-    //localStorage.clear() // sempre que começar uma nova partida vai redefinir as cartas novamente
+
     for ( let i = 1, len = listcards.length; i <= len; i++ ) {
-        if (!localStorage.getItem("imagemCarta"+i))
-            position = Math.floor(Math.random() * listcards.length);
-            localStorage.setItem("imagemCarta"+i, listcards[position] );
-            listcards.splice(position,1);// remove carta da lista para não repetir
-      }
-});
+        position = Math.floor(Math.random() * listcards.length);
+        localStorage.setItem("imagemCarta"+i, listcards[position] );
+        listcards.splice(position,1);// remove carta da lista para não repetir
+    }
 });
 
