@@ -29,6 +29,18 @@
                             }
                         }
                         document.getElementById("img-input").addEventListener("change", readImage, false);
+
+                        function salvar() {
+                            teste =  document.getElementById("imagem");
+                            for ( let i = 1, len = localStorage.length +1 ; i <= len; i++ ) {
+                                //  $(".imagemCarta1").html(localStorage.getItem("imagemCarta1"));
+                                if(!localStorage.getItem("imagemCarta"+i)){
+                                    localStorage.setItem("imagemCarta"+i, teste);
+                                    alert("Imagem Salva no Localstorage!");
+                                    break
+                                }    
+                            };
+                        }
                     </script>
                     <img id="preview" src="">
                 </div>
@@ -46,16 +58,6 @@
                 </div> 
             </form>
         </div>
-        <script type="file/javascript" src="FileSaver.min.js"></script>
-        <!-- função ao clicar em salvar -->
-        <script>
-            function salvar() {
-                    //function copySync(src, dest) {
-                        var file = new File(["Hello, world!"], "hello world.txt", {type: "text/plain;charset=utf-8"});
-                        FileSaver.saveAs(file);
-                    //}
-            }
-    </script>
     </main>
 </body>
 </html>
