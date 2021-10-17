@@ -62,7 +62,7 @@ function checkForMatch() {
         //}
         cardsEncontrados++;
 
-        if (cardsEncontrados === 18) { 
+        if (cardsEncontrados === 15) { 
             reset();
             return;
         }
