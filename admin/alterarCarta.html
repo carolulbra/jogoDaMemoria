@@ -13,7 +13,21 @@
         </div>
         <div id="manter"> Menu Alterar Cartas
             <div class="input">
-            <input id="enviar" type="submit" value="Confirmar">
+            
+            <script>
+                    var  dir  =  '../escolher_jogar/' 
+            
+                    window.onload = function(){
+                        for ( let i = 1, len = localStorage.length; i <= len; i++ ) { 
+                            if(localStorage.getItem("imagemCarta"+i)){
+                                document.body.innerHTML += "<img  height='150' src='"+dir+localStorage.getItem("imagemCarta"+i)+"''>";
+                            }
+                                
+                        }
+                    }
+                  
+            </script>
+            
             <br>
             <a href="telaAdmin.html">Voltar Menu</a>
             

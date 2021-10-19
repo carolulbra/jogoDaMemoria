@@ -167,7 +167,7 @@ $(window).load(function() {
     for ( let i = 1, len = listcards.length; i <= len; i++ ) {
         
         position = Math.floor(Math.random() * listcards.length);
-        if(!localStorage.getItem("imagemCarta"+i)) // verificar se nessa posição já exixte uma carta
+        if(!localStorage.getItem("imagemCarta"+i)) // verificar se nessa posição já existe uma carta
             localStorage.setItem("imagemCarta"+i, listcards[position] );
             listcards.splice(position,1);// remove carta da lista para não repetir
     }

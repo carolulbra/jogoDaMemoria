@@ -152,7 +152,7 @@ function shuffle() {
     cards.forEach(card => {
         let randomPos = Math.floor(Math.random() * 4);
         card.style.order = randomPos;
-        positionCard[randomPos] = card.style.order;
+        //positionCard[randomPos] = card.style.order;
     });
 };
 
