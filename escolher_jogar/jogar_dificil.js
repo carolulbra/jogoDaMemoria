@@ -62,7 +62,7 @@ function checkForMatch() {
         //}
         cardsEncontrados++;
 
-        if (cardsEncontrados === 15) { 
+        if (cardsEncontrados === 18) { 
             reset();
             return;
         }
@@ -112,17 +112,12 @@ function reset() {
         iniciopontuacao = iniciopontuacao + 150;
         pontuacao();
         atualizamoedas();
-        seg = 45;
+        seg = 90;
         cards.forEach(card => card.classList.remove('flip'));
         [hasFlippedCard, lockBoard] = [false, false];
         cards.forEach(card => [card] = [null]);
         cards.forEach(card => card.addEventListener('click', flipCard));
-        (function shuffle() {
-            cards.forEach((card) => {
-                let randomPosition = Math.floor(Math.random() * 12);
-                card.style.order = randomPosition;
-            })
-        })();
+        shuffle();
     }, 800);
 }
 
@@ -143,12 +138,13 @@ function resetBoard() {
     [firstCard, secondCard] = [null, null];
 }
 
-(function shuffle() {
+function shuffle() {
     cards.forEach(card => {
-        let randomPos = Math.floor(Math.random() * 4);
+        let randomPos = Math.floor(Math.random() *36);
         card.style.order = randomPos;
+        //positionCard[randomPos] = card.style.order;
     });
-})();
+};
 
 
 currentTimer = setInterval(() => {

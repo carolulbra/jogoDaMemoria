@@ -4,16 +4,13 @@ var listcards = ['abigail.png',"Anao.png",'caroline.png','Demetrius.png','feitic
 for ( let i = 1, len = listcards.length; i <= len; i++ ) {
     atualizaValorHtml(i);
 }
-
+    
     function atualizaValorHtml(i) {
+        
         // $(".imagemCarta1").html(localStorage.getItem("imagemCarta1"));
         $('#imagemCarta'+i+'-0').attr('src', localStorage.getItem("imagemCarta"+i));
         $('#imagemCarta'+i+'-1').attr('src', localStorage.getItem("imagemCarta"+i));
     };
-
-
-
-
 
 //continuação jogo
 
@@ -121,7 +118,7 @@ function reset() {
         iniciopontuacao = iniciopontuacao + 20;
         pontuacao();
         atualizamoedas();
-        seg = 20;
+        seg = 10;
         cards.forEach(card => card.classList.remove('flip'));
         [hasFlippedCard, lockBoard] = [false, false];
         cards.forEach(card => [card] = [null]);
