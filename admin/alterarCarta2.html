@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Jogo da memória</title>
+</head>
+<body>
+    <main class="memory-game">
+        <div id="alterarCarta"> 
+            <p id="t1">Tela Administrador Manter Cartas</p>
+        </div>
+        <div id="manter"> Menu Alterar Cartas
+            <div>
+                <label for="img-input">Clique aqui para escolher carta...</label>
+                <input type="file" name="imagem" id="img-input" accept="image/png, image/jpeg">
+            </div>
+            <div id="img-container">
+                <script>
+                    function readImage() {
+                        if (this.files && this.files[0]) {
+                            var file = new FileReader();
+                            file.onload = function(e) {
+                                document.getElementById("preview").src = e.target.result;
+                            };       
+                             file.readAsDataURL(this.files[0]);
+                        }
+                    }
+                    document.getElementById("img-input").addEventListener("change", readImage, false);
+
+                    function salvar() {
+                        // teste =  document.getElementById("img-input").value; // salva C:\fakepath\foto.jpg
+                        var teste = document.getElementById("preview").src
+                        teste.widtht = "70";
+                        teste.height = "70";
+                        for ( let i = 1, len = localStorage.length +1 ; i <= len; i++ ) {
+                            //  $(".imagemCarta1").html(localStorage.getItem("imagemCarta1"));
+                            if(!localStorage.getItem("imagemCarta"+i)){
+                                try {
+                                    if(teste.includes('file:')){
+                                        alert("Favor escolher uma imagem para Alterar no Localstorage!");
+                                        break
+                                    }
+                                        
+                                    localStorage.setItem(id, teste);
+                                    alert("Imagem Alterada no Localstorage!");
+                                    document.getElementById("preview").src ="";
+                                    window.location = 'alterarCarta.html'
+                                    //document.getElementById("previewOld").src ="";
+                                    //break
+                                    }
+                                catch (e) {
+                                    if ( e.code === 22){
+                                        alert("ERRO ! LocalStorage cheio. Espaço total de 5mb");
+                                        document.getElementById("preview").src ="";
+                                    } 
+                                    else {  
+                                        alert("ERRO ! Falha ao inserir a imagem."+ e);
+                                        document.getElementById("preview").src ="";
+                                    } 
+                                  
+                                }
+                            }    
+                        };
+                    }
+
+                </script>
+                 Carta Antiga
+                <img id="previewOld" src="" height="150" >
+                Carta Nova
+                <img id="preview" src="" height="150" >
+                
+            </div>
+            <div>
+                <!--<input type="submit" value="Salvar">-->
+                <button onclick="salvar()">Alterar Carta</button>
+            </div>
+          
+            <br>
+            <a href="alterarCarta.html">Voltar Alterar</a>
+            </div>
+            <div id="desenv">"EM DESENVOLVIMENTO"</div>
+            <script>
+                const urlParams = new URLSearchParams(window.location.search);
+                const id = urlParams.get('id');
+                var  dir  =  '../escolher_jogar/' 
+        
+                    if(localStorage.getItem(id).includes('data')){
+                        document.getElementById("previewOld").src = localStorage.getItem(id);
+                       // document.body.innerHTML += "<img  src=' "+localStorage.getItem(id)+" ' hspace='5'  height='150'  border='3' align='down'  border='3' >";
+                    }
+                    else{
+                        document.getElementById("previewOld").src = dir+localStorage.getItem(id);
+                       // document.body.innerHTML += "<img  src=' "+dir+localStorage.getItem(id)+" ' hspace='5'  height='150' border='3' align='down'  border='3' >";
+                    }  
+                
+                     
+            </script>
+        </div>
+    </main>
+</body>
+</html>

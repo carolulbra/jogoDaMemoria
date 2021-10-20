@@ -39,7 +39,7 @@
                                 //  $(".imagemCarta1").html(localStorage.getItem("imagemCarta1"));
                                 if(!localStorage.getItem("imagemCarta"+i)){
                                     try {
-                                        if(teste === "file:///H:/Ulbra/jogoDaMemoria/admin/inserirCarta.html"){
+                                        if(teste.includes('file:')){
                                             alert("Favor escolher uma imagem para Salva no Localstorage!");
                                             break
                                         }
