@@ -154,6 +154,12 @@ currentTimer = setInterval(() => {
         finalizarJogo(flag = 1);
     timer.textContent = `${seg}`;
     seg--;
+    if(boosterOrpimento == 1 && countTime <10){//ADICIONADO
+        countTime = countTime +1 ;
+    }else{ 
+        boosterOrpimento = 0;
+        countTime = 0 ;
+    }   
 }, 1000);
 
 function finalizarJogo(flag) {
