@@ -49,7 +49,7 @@
                                     document.getElementById("preview").src ="";
                                     window.location = 'alterarCarta.html'
                                     //document.getElementById("previewOld").src ="";
-                                    //break
+                                    break
                                     }
                                 catch (e) {
                                     if ( e.code === 22){
@@ -67,11 +67,14 @@
                     }
 
                 </script>
-                 Carta Antiga
-                <img id="previewOld" src="" height="150" >
-                Carta Nova
-                <img id="preview" src="" height="150" >
-                
+
+                <figure>
+                    <img id="preview" src="" height="150" >
+                    <figcaption>Carta Nova</figcaption>
+                    <img id="previewOld" src="" height="150">
+                    <figcaption>Carta Antiga</figcaption>    
+                </figure>
+                  
             </div>
             <div>
                 <!--<input type="submit" value="Salvar">-->
@@ -81,7 +84,6 @@
             <br>
             <a href="alterarCarta.html">Voltar Alterar</a>
             </div>
-            <div id="desenv">"EM DESENVOLVIMENTO"</div>
             <script>
                 const urlParams = new URLSearchParams(window.location.search);
                 const id = urlParams.get('id');
