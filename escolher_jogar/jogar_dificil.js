@@ -1,7 +1,7 @@
-var listcards = ['abigail.png',"Anao.png",'caroline.png','Demetrius.png','feiticeiro.png','Gunther.png','Jodi.png','Knet.png','krobus.png','Linus.png','Marlon.png','Maru.png','Morris.png','pierre.png','robin.png','Sam.png','Sebastian.png','Sr.Qi.png'];
+// var listcards = ['abigail.png',"Anao.png",'caroline.png','Demetrius.png','feiticeiro.png','Gunther.png','Jodi.png','Knet.png','krobus.png','Linus.png','Marlon.png','Maru.png','Morris.png','pierre.png','robin.png','Sam.png','Sebastian.png','Sr.Qi.png'];
 
 
-for ( let i = 1, len = listcards.length; i <= len; i++ ) {
+for ( let i = 1, len = localStorage.length; i <= len; i++ ) {
     atualizaValorHtml(i);
 }
 
@@ -36,6 +36,12 @@ let numeroJogadas = 0;
 let boosterOrpimento = 0;
 let countTime = 0;
 
+// Baita cabrito para embarralhar as cartas no inicio
+let varTeste = 0;
+if( varTeste === 0 ){
+    shuffle();
+    varTeste = 1;
+}
 
 function flipCard() {
     if (lockBoard) return;
@@ -121,7 +127,6 @@ function reset() {
     }, 800);
 }
 
-
 function unflipCards() {
     lockBoard = true;
 
@@ -148,6 +153,7 @@ function shuffle() {
 
 
 currentTimer = setInterval(() => {
+    
     if (seg < 0)
         finalizarJogo(flag = 1);
     timer.textContent = `${seg}`;
