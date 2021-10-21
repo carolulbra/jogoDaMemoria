@@ -2,107 +2,105 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-
-    <title>Memory Game</title>
-
-    <link rel="stylesheet" href="jogar_medio.css">
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <head>
+        <meta charset="UTF-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <title>Memory Game</title>
+        <link rel="stylesheet" href="jogar_medio.css">
 </head>
 
 <body>
 
     <div class="bg">
-    <section class="memory-game">
-        <div class="memory-card" data-framework="imagemCarta1">
-            <img class="front-face" id="imagemCarta1-0"  />
-            <img class="back-face" src="backface.png" alt="SV" />
-        </div>
-        <div class="memory-card" data-framework="imagemCarta1">
-            <img class="front-face" id="imagemCarta1-1"  />
-            <img class="back-face" src="backface.png" alt="SV" />
-        </div>
-        <div class="memory-card" data-framework="imagemCarta2">
-            <img class="front-face" id="imagemCarta2-0"  />
-            <img class="back-face" src="backface.png" alt="SV" />
-        </div>
-        <div class="memory-card" data-framework="imagemCarta2">
-            <img class="front-face" id="imagemCarta2-1"  />
-            <img class="back-face" src="backface.png" alt="SV" />
-        </div>
-        <div class="memory-card" data-framework="imagemCarta3">
-            <img class="front-face" id="imagemCarta3-0"  />
-            <img class="back-face" src="backface.png" alt="SV" />
-        </div>
-        <div class="memory-card" data-framework="imagemCarta3">
-            <img class="front-face" id="imagemCarta3-1"  />
-            <img class="back-face" src="backface.png" alt="SV" />
-        </div>
-        <div class="memory-card" data-framework="imagemCarta4">
-            <img class="front-face" id="imagemCarta4-0"  />
-            <img class="back-face" src="backface.png" alt="SV" />
-        </div>
-        <div class="memory-card" data-framework="imagemCarta4">
-            <img class="front-face" id="imagemCarta4-1"  />
-            <img class="back-face" src="backface.png" alt="SV" />
-        </div>
-        <div class="memory-card" data-framework="imagemCarta5">
-            <img class="front-face" id="imagemCarta5-0"  />
-            <img class="back-face" src="backface.png" alt="SV" />
-        </div>
-        <div class="memory-card" data-framework="imagemCarta5">
-            <img class="front-face" id="imagemCarta5-1"  />
-            <img class="back-face" src="backface.png" alt="SV" />
-        </div>
-        <div class="memory-card" data-framework="imagemCarta6">
-            <img class="front-face" id="imagemCarta6-0"  />
-            <img class="back-face" src="backface.png" alt="SV" />
-        </div>
-        <div class="memory-card" data-framework="imagemCarta6">
-            <img class="front-face" id="imagemCarta6-1"  />
-            <img class="back-face" src="backface.png" alt="SV" />
-        </div>
-        <div class="memory-card" data-framework="imagemCarta7">
-            <img class="front-face" id="imagemCarta7-0"  />
-            <img class="back-face" src="backface.png" alt="SV" />
-        </div>
-        <div class="memory-card" data-framework="imagemCarta7">
-            <img class="front-face" id="imagemCarta7-1"  />
-            <img class="back-face" src="backface.png" alt="SV" />
-        </div>
-        <div class="memory-card" data-framework="imagemCarta8">
-            <img class="front-face" id="imagemCarta8-0"  />
-            <img class="back-face" src="backface.png" alt="SV" />
-        </div>
-        <div class="memory-card" data-framework="imagemCarta8">
-            <img class="front-face" id="imagemCarta8-1"  />
-            <img class="back-face" src="backface.png" alt="SV" />
-        </div>
-    </section>
-
-
-    <div class="infos">
-        <div class="item">
-            <span id="pontos">--</span>
-            <span id="pontos">Pontos</span>
-        </div>
-        <div class="item">
-            <span id="timer">--</span>
-            <span id="timer">Segundos</span>
-        </div>
-        <div class="item">
-            <span id="moedas">--</span>
-            <span id="moedas">Moedas</span>
-        </div>
-        <div class="orpimento">
-            <span class="valor-orpimento"></span>
-        </div>
-        <div class="gato">
-            <span class="valor-gato"></span>
-        </div>
-        <div class="junimo">
-            <span class="valor-junimo"></span>
+        <section class="memory-game">
+            <div class="memory-card" data-framework="imagemCarta1">
+                <img class="front-face" id="imagemCarta1-0"  />
+                <img class="back-face" src="backface.png" alt="SV" />
+            </div>
+            <div class="memory-card" data-framework="imagemCarta1">
+                <img class="front-face" id="imagemCarta1-1"  />
+                <img class="back-face" src="backface.png" alt="SV" />
+            </div>
+            <div class="memory-card" data-framework="imagemCarta2">
+                <img class="front-face" id="imagemCarta2-0"  />
+                <img class="back-face" src="backface.png" alt="SV" />
+            </div>
+            <div class="memory-card" data-framework="imagemCarta2">
+                <img class="front-face" id="imagemCarta2-1"  />
+                <img class="back-face" src="backface.png" alt="SV" />
+            </div>
+            <div class="memory-card" data-framework="imagemCarta3">
+                <img class="front-face" id="imagemCarta3-0"  />
+                <img class="back-face" src="backface.png" alt="SV" />
+            </div>
+            <div class="memory-card" data-framework="imagemCarta3">
+                <img class="front-face" id="imagemCarta3-1"  />
+                <img class="back-face" src="backface.png" alt="SV" />
+            </div>
+            <div class="memory-card" data-framework="imagemCarta4">
+                <img class="front-face" id="imagemCarta4-0"  />
+                <img class="back-face" src="backface.png" alt="SV" />
+            </div>
+            <div class="memory-card" data-framework="imagemCarta4">
+                <img class="front-face" id="imagemCarta4-1"  />
+                <img class="back-face" src="backface.png" alt="SV" />
+            </div>
+            <div class="memory-card" data-framework="imagemCarta5">
+                <img class="front-face" id="imagemCarta5-0"  />
+                <img class="back-face" src="backface.png" alt="SV" />
+            </div>
+            <div class="memory-card" data-framework="imagemCarta5">
+                <img class="front-face" id="imagemCarta5-1"  />
+                <img class="back-face" src="backface.png" alt="SV" />
+            </div>
+            <div class="memory-card" data-framework="imagemCarta6">
+                <img class="front-face" id="imagemCarta6-0"  />
+                <img class="back-face" src="backface.png" alt="SV" />
+            </div>
+            <div class="memory-card" data-framework="imagemCarta6">
+                <img class="front-face" id="imagemCarta6-1"  />
+                <img class="back-face" src="backface.png" alt="SV" />
+            </div>
+            <div class="memory-card" data-framework="imagemCarta7">
+                <img class="front-face" id="imagemCarta7-0"  />
+                <img class="back-face" src="backface.png" alt="SV" />
+            </div>
+            <div class="memory-card" data-framework="imagemCarta7">
+                <img class="front-face" id="imagemCarta7-1"  />
+                <img class="back-face" src="backface.png" alt="SV" />
+            </div>
+            <div class="memory-card" data-framework="imagemCarta8">
+                <img class="front-face" id="imagemCarta8-0"  />
+                <img class="back-face" src="backface.png" alt="SV" />
+            </div>
+            <div class="memory-card" data-framework="imagemCarta8">
+                <img class="front-face" id="imagemCarta8-1"  />
+                <img class="back-face" src="backface.png" alt="SV" />
+            </div>
+        </section>
+        <div class="infos">
+            <div class="item">
+                <span id="pontos">--</span>
+                <span id="pontos">Pontos</span>
+            </div>
+            <div class="item">
+                <span id="timer">--</span>
+                <span id="timer">Segundos</span>
+            </div>
+            <div class="item">
+                <span id="moedas">--</span>
+                <span id="moedas">Moedas</span>
+            </div>
+            <div class="orpimento">
+                <span class="valor-orpimento"></span>
+            </div>
+            <div class="gato">
+                <span class="valor-gato"></span>
+            </div>
+            <div class="junimo">
+                <span class="valor-junimo"></span>
+            </div>
         </div>
     </div>
 

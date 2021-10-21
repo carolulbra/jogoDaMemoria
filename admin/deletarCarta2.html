@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Jogo da memória</title>
+</head>
+<body>
+    <main class="memory-game">
+        <div id="deletarCarta"> 
+            <p id="t1">Tela Administrador Manter Cartas</p>
+        </div>
+        <div id="manter">Menu Deletar Carta
+        
+            <div id="img-container">
+                <script>
+                   
+
+                    function excluir() {
+                        if ( localStorage.length >= 16) {
+                            //  $(".imagemCarta1").html(localStorage.getItem("imagemCarta1"));
+                            try {
+                                if(localStorage.getItem(id)){
+                                    localStorage.removeItem(id);
+                                    alert("Cartas excluida do Localstorage!");
+                                    window.location = 'deletarCarta.html'
+                                }
+                            }
+                            catch (e) {
+                                alert("ERRO !"+ e);
+                               
+                            }          
+                        }
+                        else{
+                            alert("Ops! Você não pode excluir mais cartas, pois o jogo não funcionaria no level Dificil. 'Minimo de 18 cartas'");
+                            window.location = 'deletarCarta.html'
+                        }
+                    }
+                    
+
+                </script>
+
+                <figure>
+                    <img id="previewOld" src="" height="150">
+                    <figcaption>Carta para excluir</figcaption>    
+                </figure>
+                  
+            </div>
+            <div>
+                <!--<input type="submit" value="Salvar">-->
+                <button onclick="excluir()">Excluir Carta</button>
+            </div>
+          
+            <br>
+            <a href="deletarCarta.html">Voltar Excluir</a>
+            </div>
+            <script>
+                const urlParams = new URLSearchParams(window.location.search);
+                const id = urlParams.get('id');
+                var  dir  =  '../escolher_jogar/' 
+        
+                    if(localStorage.getItem(id).includes('data')){
+                        document.getElementById("previewOld").src = localStorage.getItem(id);
+                       // document.body.innerHTML += "<img  src=' "+localStorage.getItem(id)+" ' hspace='5'  height='150'  border='3' align='down'  border='3' >";
+                    }
+                    else{
+                        document.getElementById("previewOld").src = dir+localStorage.getItem(id);
+                       // document.body.innerHTML += "<img  src=' "+dir+localStorage.getItem(id)+" ' hspace='5'  height='150' border='3' align='down'  border='3' >";
+                    }  
+                
+                     
+            </script>
+        </div>
+    </main>
+</body>
+</html>

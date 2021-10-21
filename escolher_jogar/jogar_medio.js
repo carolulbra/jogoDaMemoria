@@ -1,7 +1,8 @@
-var listcards = ['abigail.png',"Anao.png",'caroline.png','Demetrius.png','feiticeiro.png','Gunther.png','Jodi.png','Knet.png','krobus.png','Linus.png','Marlon.png','Maru.png','Morris.png','pierre.png','robin.png','Sam.png','Sebastian.png','Sr.Qi.png'];
+// var listcards = ['abigail.png',"Anao.png",'caroline.png','Demetrius.png','feiticeiro.png','Gunther.png','Jodi.png','Knet.png','krobus.png','Linus.png','Marlon.png','Maru.png','Morris.png','pierre.png','robin.png','Sam.png','Sebastian.png','Sr.Qi.png'];
 
 
-for ( let i = 1, len = listcards.length; i <= len; i++ ) {
+
+for ( let i = 1, len = localStorage.length; i <= len; i++ ) {
     atualizaValorHtml(i);
 }
 
@@ -38,6 +39,13 @@ let numeroJogadas = 0;
 let boosterOrpimento = 0;
 let countTime = 0;
 
+// Baita cabrito para embarralhar as cartas no inicio
+let varTeste = 0;
+if( varTeste === 0 ){
+    shuffle();
+    varTeste = 1;
+}
+    
 
 function flipCard() {
     if (lockBoard) return;
@@ -119,12 +127,7 @@ function reset() {
         [hasFlippedCard, lockBoard] = [false, false];
         cards.forEach(card => [card] = [null]);
         cards.forEach(card => card.addEventListener('click', flipCard));
-        (function shuffle() {
-            cards.forEach((card) => {
-                let randomPosition = Math.floor(Math.random() * 12);
-                card.style.order = randomPosition;
-            })
-        })();
+        shuffle();
     }, 800);
 }
 
@@ -145,12 +148,13 @@ function resetBoard() {
     [firstCard, secondCard] = [null, null];
 }
 
-(function shuffle() {
+function shuffle() {
     cards.forEach(card => {
-        let randomPos = Math.floor(Math.random() * 4);
+        let randomPos = Math.floor(Math.random() * 16);
         card.style.order = randomPos;
+        //positionCard[randomPos] = card.style.order;
     });
-})();
+};
 
 
 currentTimer = setInterval(() => {
@@ -158,6 +162,12 @@ currentTimer = setInterval(() => {
         finalizarJogo(flag = 1);
     timer.textContent = `${seg}`;
     seg--;
+    if(boosterOrpimento == 1 && countTime <10){//ADICIONADO
+        countTime = countTime +1 ;
+    }else{ 
+        boosterOrpimento = 0;
+        countTime = 0 ;
+    }   
 }, 1000);
 
 function finalizarJogo(flag) {
@@ -235,40 +245,3 @@ $('.junimo').click(function(){
     }else alert("Você não tem este booster. Compre na loja para utilizá-lo!");
 });
 
-$(document).ready(function () {
-
-    atualizaValorHtml();
-
-    function atualizaValorHtml() {
-    
-        $('#imagemCarta1-0').attr('src', localStorage.getItem("imagemCarta1"));
-        $('#imagemCarta1-1').attr('src', localStorage.getItem("imagemCarta1"));
- 
-        $('#imagemCarta2-0').attr('src', localStorage.getItem("imagemCarta2"));
-        $('#imagemCarta2-1').attr('src', localStorage.getItem("imagemCarta2"));
-
-        
-        $('#imagemCarta3-0').attr('src', localStorage.getItem("imagemCarta3"));
-        $('#imagemCarta3-1').attr('src', localStorage.getItem("imagemCarta3"));
- 
-        $('#imagemCarta4-0').attr('src', localStorage.getItem("imagemCarta4"));
-        $('#imagemCarta4-1').attr('src', localStorage.getItem("imagemCarta4"));
-
-        
-        $('#imagemCarta5-0').attr('src', localStorage.getItem("imagemCarta5"));
-        $('#imagemCarta5-1').attr('src', localStorage.getItem("imagemCarta5"));
- 
-        $('#imagemCarta6-0').attr('src', localStorage.getItem("imagemCarta6"));
-        $('#imagemCarta6-1').attr('src', localStorage.getItem("imagemCarta6"));
-
-        
-        $('#imagemCarta7-0').attr('src', localStorage.getItem("imagemCarta7"));
-        $('#imagemCarta7-1').attr('src', localStorage.getItem("imagemCarta7"));
- 
-        $('#imagemCarta8-0').attr('src', localStorage.getItem("imagemCarta8"));
-        $('#imagemCarta8-1').attr('src', localStorage.getItem("imagemCarta8"));
-
-
-    };
-
-});

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Jogo da memória</title>
 </head>
 <body>
@@ -13,11 +14,33 @@
         </div>
         <div id="manter"> Menu Alterar Cartas
             <div class="input">
-            <input id="enviar" type="submit" value="Confirmar">
+                    Escolha uma carta para alterar a imagem
+            <script>
+                    var  dir  =  '../escolher_jogar/' 
+            
+                    window.onload = function(){
+                        for ( let i = 1, len = localStorage.length; i <= len; i++ ) { 
+                            
+                            if(localStorage.getItem("imagemCarta"+i)){
+                                if(localStorage.getItem("imagemCarta"+i).includes('data')){
+                                    document.body.innerHTML += "<img  src=' "+localStorage.getItem("imagemCarta"+i)+" ' id='imagemCarta"+i+"'  onclick='alterar(id)' hspace='5'  height='150'  border='3' align='down'  border='3' >";
+                                }
+                                else{
+                                    document.body.innerHTML += "<img  src=' "+dir+localStorage.getItem("imagemCarta"+i)+" ' id='imagemCarta"+i+"' onclick='alterar(id)' hspace='5'  height='150' border='3' align='down'  border='3' >";
+                                }  
+                            }   
+                        }
+                    }
+
+                    function alterar(id){
+                        alert("Clicou na carta " + id);
+                        window.location = 'alterarCarta2.html?id='+id
+                    }
+                  
+            </script>
+            
             <br>
             <a href="telaAdmin.html">Voltar Menu</a>
-            
-            <div id="desenv">"EM DESENVOLVIMENTO"</div>
         </div>
         </div>
     </main>

@@ -25,37 +25,61 @@
                                 file.onload = function(e) {
                                     document.getElementById("preview").src = e.target.result;
                                 };       
-                                file.readAsDataURL(this.files[0]);
+                                 file.readAsDataURL(this.files[0]);
                             }
                         }
                         document.getElementById("img-input").addEventListener("change", readImage, false);
+
+                        function salvar() {
+                            // teste =  document.getElementById("img-input").value; // salva C:\fakepath\foto.jpg
+                            var teste = document.getElementById("preview").src
+                            teste.widtht = "70";
+                            teste.height = "70";
+                            for ( let i = 1, len = localStorage.length +1 ; i <= len; i++ ) {
+                                //  $(".imagemCarta1").html(localStorage.getItem("imagemCarta1"));
+                                if(!localStorage.getItem("imagemCarta"+i)){
+                                    try {
+                                        if(teste.includes('file:')){
+                                            alert("Favor escolher uma imagem para Salva no Localstorage!");
+                                            break
+                                        }
+                                            
+                                        localStorage.setItem("imagemCarta"+i, teste);
+                                        alert("Imagem Salva no Localstorage!");
+                                        document.getElementById("preview").src ="";
+                                        break
+                                        }
+                                    catch (e) {
+                                        if ( e.code === 22){
+                                            alert("ERRO ! LocalStorage cheio. Espaço total de 5mb");
+                                            document.getElementById("preview").src ="";
+                                        } 
+                                        else {  
+                                            alert("ERRO ! Falha ao inserir a imagem."+ e);
+                                            document.getElementById("preview").src ="";
+                                        } 
+                                      
+                                    }
+                                }    
+                            };
+                        }
+
                     </script>
-                    <img id="preview" src="">
+                    <img id="preview" src="" height="150" >
                 </div>
                 <div>
                     <!--<input type="submit" value="Salvar">-->
                     <button onclick="salvar()">Salvar</button>
                 </div>
-                <br> 
-                <div id="desenv">"EM DESENVOLVIMENTO"</div>
+                    <br> 
+                    <br>
+                    <br> 
                     <br>
                     <a href="telaAdmin.html">Voltar Menu</a>
                 </div>
-                
-            <div id="desenv">"EM DESENVOLVIMENTO"</div>
                 </div> 
             </form>
         </div>
-        <script type="file/javascript" src="FileSaver.min.js"></script>
-        <!-- função ao clicar em salvar -->
-        <script>
-            function salvar() {
-                    //function copySync(src, dest) {
-                        var file = new File(["Hello, world!"], "hello world.txt", {type: "text/plain;charset=utf-8"});
-                        FileSaver.saveAs(file);
-                    //}
-            }
-    </script>
     </main>
 </body>
 </html>

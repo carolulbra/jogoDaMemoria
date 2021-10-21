@@ -1,19 +1,16 @@
-var listcards = ['abigail.png',"Anao.png",'caroline.png','Demetrius.png','feiticeiro.png','Gunther.png','Jodi.png','Knet.png','krobus.png','Linus.png','Marlon.png','Maru.png','Morris.png','pierre.png','robin.png','Sam.png','Sebastian.png','Sr.Qi.png'];
+// var listcards = ['abigail.png',"Anao.png",'caroline.png','Demetrius.png','feiticeiro.png','Gunther.png','Jodi.png','Knet.png','krobus.png','Linus.png','Marlon.png','Maru.png','Morris.png','pierre.png','robin.png','Sam.png','Sebastian.png','Sr.Qi.png'];
 
 
-for ( let i = 1, len = listcards.length; i <= len; i++ ) {
+for ( let i = 1, len = localStorage.length; i <= len; i++ ) {
     atualizaValorHtml(i);
 }
-
+    
     function atualizaValorHtml(i) {
+        
         // $(".imagemCarta1").html(localStorage.getItem("imagemCarta1"));
         $('#imagemCarta'+i+'-0').attr('src', localStorage.getItem("imagemCarta"+i));
         $('#imagemCarta'+i+'-1').attr('src', localStorage.getItem("imagemCarta"+i));
     };
-
-
-
-
 
 //continuação jogo
 
@@ -42,9 +39,12 @@ let numeroJogadas = 0;
 let boosterOrpimento = 0;
 let countTime = 0;
 
-
-
-
+// Baita cabrito para embarralhar as cartas no inicio
+let varTeste = 0;
+if( varTeste === 0 ){
+    shuffle();
+    varTeste = 1;
+}
 
 function flipCard() {
     if (lockBoard) return;
@@ -121,7 +121,7 @@ function reset() {
         iniciopontuacao = iniciopontuacao + 20;
         pontuacao();
         atualizamoedas();
-        seg = 20;
+        seg = 10;
         cards.forEach(card => card.classList.remove('flip'));
         [hasFlippedCard, lockBoard] = [false, false];
         cards.forEach(card => [card] = [null]);
@@ -152,7 +152,7 @@ function shuffle() {
     cards.forEach(card => {
         let randomPos = Math.floor(Math.random() * 4);
         card.style.order = randomPos;
-        positionCard[randomPos] = card.style.order;
+        //positionCard[randomPos] = card.style.order;
     });
 };
 
@@ -164,7 +164,10 @@ currentTimer = setInterval(() => {
     seg--;
     if(boosterOrpimento == 1 && countTime <10){//ADICIONADO
         countTime = countTime +1 ;
-    }else{ boosterOrpimento = 0;}   
+    }else{ 
+        boosterOrpimento = 0;
+        countTime = 0 ;
+    }   
 }, 1000);
 
 function finalizarJogo(flag) {

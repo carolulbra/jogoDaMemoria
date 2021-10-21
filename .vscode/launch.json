@@ -4,12 +4,13 @@
     // Para obter mais informações, acesse: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+    
         
         {
             "type": "pwa-chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
-            "url": "H:/Ulbra/Laboratório de Criatividade e Projetos/jogoDaMemoria/index.html",
+            "url": "H:/Ulbra/jogoDaMemoria/index.html",
             "webRoot": "${workspaceFolder}"
         }
     ]

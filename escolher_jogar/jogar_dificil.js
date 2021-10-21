@@ -1,7 +1,7 @@
-var listcards = ['abigail.png',"Anao.png",'caroline.png','Demetrius.png','feiticeiro.png','Gunther.png','Jodi.png','Knet.png','krobus.png','Linus.png','Marlon.png','Maru.png','Morris.png','pierre.png','robin.png','Sam.png','Sebastian.png','Sr.Qi.png'];
+// var listcards = ['abigail.png',"Anao.png",'caroline.png','Demetrius.png','feiticeiro.png','Gunther.png','Jodi.png','Knet.png','krobus.png','Linus.png','Marlon.png','Maru.png','Morris.png','pierre.png','robin.png','Sam.png','Sebastian.png','Sr.Qi.png'];
 
 
-for ( let i = 1, len = listcards.length; i <= len; i++ ) {
+for ( let i = 1, len = localStorage.length; i <= len; i++ ) {
     atualizaValorHtml(i);
 }
 
@@ -36,6 +36,12 @@ let numeroJogadas = 0;
 let boosterOrpimento = 0;
 let countTime = 0;
 
+// Baita cabrito para embarralhar as cartas no inicio
+let varTeste = 0;
+if( varTeste === 0 ){
+    shuffle();
+    varTeste = 1;
+}
 
 function flipCard() {
     if (lockBoard) return;
@@ -112,20 +118,14 @@ function reset() {
         iniciopontuacao = iniciopontuacao + 150;
         pontuacao();
         atualizamoedas();
-        seg = 45;
+        seg = 90;
         cards.forEach(card => card.classList.remove('flip'));
         [hasFlippedCard, lockBoard] = [false, false];
         cards.forEach(card => [card] = [null]);
         cards.forEach(card => card.addEventListener('click', flipCard));
-        (function shuffle() {
-            cards.forEach((card) => {
-                let randomPosition = Math.floor(Math.random() * 12);
-                card.style.order = randomPosition;
-            })
-        })();
+        shuffle();
     }, 800);
 }
-
 
 function unflipCards() {
     lockBoard = true;
@@ -143,19 +143,27 @@ function resetBoard() {
     [firstCard, secondCard] = [null, null];
 }
 
-(function shuffle() {
+function shuffle() {
     cards.forEach(card => {
-        let randomPos = Math.floor(Math.random() * 4);
+        let randomPos = Math.floor(Math.random() *36);
         card.style.order = randomPos;
+        //positionCard[randomPos] = card.style.order;
     });
-})();
+};
 
 
 currentTimer = setInterval(() => {
+    
     if (seg < 0)
         finalizarJogo(flag = 1);
     timer.textContent = `${seg}`;
     seg--;
+    if(boosterOrpimento == 1 && countTime <10){//ADICIONADO
+        countTime = countTime +1 ;
+    }else{ 
+        boosterOrpimento = 0;
+        countTime = 0 ;
+    }   
 }, 1000);
 
 function finalizarJogo(flag) {
