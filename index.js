@@ -5,6 +5,18 @@ $(window).load(function() {
         
     if(!localStorage.getItem("admin")) 
         localStorage.setItem("admin", '0');
+            
+    if(!localStorage.getItem("Orpimento")) 
+        localStorage.setItem("Orpimento",'0');
+
+    if(!localStorage.getItem("Gato")) 
+        localStorage.setItem("Gato",'0');
+
+    if(!localStorage.getItem("Junimo Roxo")) 
+        localStorage.setItem("Junimo Roxo",'0');
+
+    if(!localStorage.getItem('mochila')) 
+        localStorage.setItem('mochila','0');
 
 
     function acessaAdmin(){
