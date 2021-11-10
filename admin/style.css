@@ -45,6 +45,13 @@ a {
    align-items: center;
 }
 
+.memory-game{
+   display: flex;
+    flex-direction: column;
+}
+
+
+
 #enviar{
    text-shadow: 3px 3px black;
    background: none;
@@ -100,3 +107,8 @@ label {
 
 
 
+#cartas{
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+}

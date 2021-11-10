@@ -8,7 +8,7 @@
     <title>Jogo da memória</title>
 </head>
 <body>
-    <main class="memory-game">
+    <main class="memory-game" id="memory-game">
         <div id="alterarCarta"> 
             <p id="t1">Tela Administrador Manter Cartas</p>
         </div>
@@ -19,17 +19,20 @@
                     var  dir  =  '../escolher_jogar/' 
             
                     window.onload = function(){
+                        document.getElementById("memory-game").innerHTML += "<div id='cartas'>"
                         for ( let i = 1, len = localStorage.length; i <= len; i++ ) { 
                             
                             if(localStorage.getItem("imagemCarta"+i)){
                                 if(localStorage.getItem("imagemCarta"+i).includes('data')){
-                                    document.body.innerHTML += "<img  src=' "+localStorage.getItem("imagemCarta"+i)+" ' id='imagemCarta"+i+"'  onclick='alterar(id)' hspace='5'  height='150'  border='3' align='down'  border='3' >";
+                                    document.getElementById("cartas").innerHTML += "<img  src=' "+localStorage.getItem("imagemCarta"+i)+" ' id='imagemCarta"+i+"'  onclick='alterar(id)' hspace='5'  height='100'  border='3' align='down'  border='3' >";
                                 }
                                 else{
-                                    document.body.innerHTML += "<img  src=' "+dir+localStorage.getItem("imagemCarta"+i)+" ' id='imagemCarta"+i+"' onclick='alterar(id)' hspace='5'  height='150' border='3' align='down'  border='3' >";
-                                }  
+                                    document.getElementById("cartas").innerHTML += "<img  src=' "+dir+localStorage.getItem("imagemCarta"+i)+" ' id='imagemCarta"+i+"' onclick='alterar(id)' hspace='5'  height='100' border='3' align='down'  border='3' >";
+                                }
                             }   
                         }
+                        document.getElementById("memory-game").innerHTML += "</div>"
+                        document.getElementById("memory-game").innerHTML += "<div class='input'> <a href='telaAdmin.html'>Voltar Menu</a></div>"
                     }
 
                     function alterar(id){
@@ -38,9 +41,6 @@
                     }
                   
             </script>
-            
-            <br>
-            <a href="telaAdmin.html">Voltar Menu</a>
         </div>
         </div>
     </main>
