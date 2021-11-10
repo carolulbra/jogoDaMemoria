@@ -19,12 +19,26 @@
                    
 
                     function excluir() {
-                        if ( localStorage.length >= 16) {
+                        if ( localStorage.length >= 23) {
                             //  $(".imagemCarta1").html(localStorage.getItem("imagemCarta1"));
                             try {
                                 if(localStorage.getItem(id)){
+                                   // alert(id);
                                     localStorage.removeItem(id);
                                     alert("Cartas excluida do Localstorage!");
+                                    len = localStorage.length -4;
+                                    // proxima = id+1  
+                                    for ( let i = 1; i <= len; i++ ) {
+                                        if(!localStorage.getItem("imagemCarta"+i)){
+                                            proxima = i+1  ;
+                                            // alert("imagemCarta"+i);
+                                            // alert("imagemCarta"+proxima);
+                                            // alert(localStorage.getItem("imagemCarta"+i)+"-"+localStorage.getItem("imagemCarta"+proxima));
+                                            localStorage.setItem("imagemCarta"+i, localStorage.getItem("imagemCarta"+proxima));
+                                            localStorage.removeItem("imagemCarta"+proxima);
+                                        }    
+                                    }
+                                    
                                     window.location = 'deletarCarta.html'
                                 }
                             }
