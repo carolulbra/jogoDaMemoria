@@ -175,13 +175,27 @@ $(window).load(function() {
     
     var listcards = ['abigail.png',"Anao.png",'caroline.png','Demetrius.png','feiticeiro.png','Gunther.png','Jodi.png','Knet.png','krobus.png','Linus.png','Marlon.png','Maru.png','Morris.png','pierre.png','robin.png','Sam.png','Sebastian.png','Sr.Qi.png'];
 
-
-    for ( let i = 1, len = listcards.length; i <= len; i++ ) {
+    if(localStorage.length < 6){
+        for ( let i = 1, len = listcards.length; i <= len; i++ ) {
         
-        position = Math.floor(Math.random() * listcards.length);
-        if(!localStorage.getItem("imagemCarta"+i)) // verificar se nessa posição já existe uma carta
-            localStorage.setItem("imagemCarta"+i, listcards[position] );
-            listcards.splice(position,1);// remove carta da lista para não repetir
+            position = Math.floor(Math.random() * listcards.length);
+            if(!localStorage.getItem("imagemCarta"+i)) // verificar se nessa posição já existe uma carta
+                localStorage.setItem("imagemCarta"+i, listcards[position] );
+                listcards.splice(position,1);// remove carta da lista para não repetir
+        }
+
+        if(!localStorage.getItem("Orpimento")) 
+            localStorage.setItem("Orpimento",'0');
+
+        if(!localStorage.getItem("Gato")) 
+            localStorage.setItem("Gato",'0');
+
+        if(!localStorage.getItem("Junimo Roxo")) 
+            localStorage.setItem("Junimo Roxo",'0');
+
+        if(!localStorage.getItem('mochila')) 
+            localStorage.setItem('mochila','0');
     }
+   
 });
 
